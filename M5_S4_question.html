@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>問題文プレビュー：M5 S4実習課題</title>
+<style>
+body { font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; color: #525252; line-height: 1.6; }
+h1 { font-size: 24px; border-bottom: 2px solid #333; padding-bottom: 10px; }
+h3 { font-size: 18px; margin-top: 30px; }
+h4 { font-size: 16px; margin-top: 20px; }
+hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
+</style>
+</head>
+<body>
+
+<h1>アイデアを元に業務特化Botを3つ作ろう</h1>
+
+<h3>目的</h3>
+<p>既存のBot事例から「骨組み（構造）」を抽出し、自分の業務に合わせてカスタマイズする力を身につける。合計3つのBotを作ることで、Bot設計の反復練習をする。</p>
+
+<h3>課題</h3>
+<p>AI Booster 100（講義で紹介した事例集）を参考に、業務特化Botを3つ作成する。うち少なくとも1つは他人のアイデアの「骨組み」を分析し、自分の業務向けにカスタマイズしたものにする。</p>
+
+<hr>
+
+<h3>手順</h3>
+
+<h4>ステップ① 事例の分析（AI Booster 100を読む）</h4>
+<p>事例集から気になるBot事例を3つ以上ピックアップし、それぞれの「目的」「入力」「出力形式」「カスタム指示の要点」を箇条書きで整理する。</p>
+
+<div style="background: #f5f5f5; border-left: 4px solid #666; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
+<strong>骨組み抽出の例（クレーム対応メールBotの場合）</strong><br><br>
+あるBot事例を分析して、以下のように骨組みを抜き出します。<br><br>
+【元のBot事例】クレーム対応メール作成Bot<br>
+・<strong>目的</strong>：顧客からのクレームに対して丁寧な返信メールを作成する<br>
+・<strong>入力</strong>：クレーム内容のテキスト（顧客名、商品名、問題の概要）<br>
+・<strong>出力形式</strong>：件名＋本文（謝罪→原因説明→対応策→締め）の4段構成<br>
+・<strong>カスタム指示の要点</strong>：ペルソナ（カスタマーサポート担当）、トーン（丁寧・共感的）、禁止事項（責任転嫁しない）<br><br>
+【抽出した骨組み】<br>
+・「テキスト入力 → 定型構成の文書出力」パターン<br>
+・4段構成（導入→背景→本題→締め）のフォーマット<br>
+・ペルソナ＋トーン＋禁止事項の3点セットで指示<br><br>
+【自分用カスタマイズ例】<br>
+この骨組みを「社内報告書作成Bot」に転用する<br>
+・入力：インシデント内容 → 出力：報告書（経緯→影響→対応→再発防止策）の4段構成<br>
+・ペルソナを「品質管理担当」に変更、トーンを「客観的・簡潔」に変更
+</div>
+
+<h4>ステップ② 3つのBotを作成する</h4>
+<p>GPTsまたはGemで3つのBotを作成する。それぞれ異なる業務課題を解決するBotにする。例：議事録要約Bot、メール下書きBot、FAQ応答Bot等。</p>
+
+<div style="background: #e8f4f8; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
+<strong>ヒント</strong><br>
+3つのBotはそれぞれ異なるジャンル・用途にするとスキルの幅が広がります。たとえば「文書作成系」「分析・要約系」「アイデア出し系」のように分けると、バリエーション豊かなポートフォリオになります。自分の業務で本当に使えるBotを作ると、課題と実務の両方に役立ちます。ユニークな組み合わせほど高評価につながります。
+</div>
+
+<h4>ステップ③ 1つは「カスタマイズBot」にする</h4>
+<p>3つのうち1つは、他人のBot事例の骨組みを抜き出して自分の業務に合わせてカスタマイズしたものにする。元のアイデアと自分の変更点を明記する。</p>
+
+<h4>ステップ④ テスト実行</h4>
+<p>3つすべてのBotをテスト実行し、期待通りの出力が得られるか確認する。</p>
+
+<div style="background: #fff3cd; border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
+<strong>注意：テストは必ず全Botで行ってください</strong><br>
+<ul style="margin: 5px 0;">
+<li>3つすべてのBotについて、最低1回はテスト実行してください。テスト結果のテキストがないBotは採点対象外になります</li>
+<li>テスト入力は実際の業務を想定した内容にしましょう。「テスト」とだけ入力するのはNGです</li>
+<li>出力が期待通りでない場合は、カスタム指示を修正して再テストしてください</li>
+<li>個人情報や機密情報が含まれないよう、テスト入力にはダミーデータを使用してください</li>
+</ul>
+</div>
+
+<hr>
+
+<h3>成果物</h3>
+
+<div style="background: #e8f4f8; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
+<strong>提出物</strong>
+<ol>
+<li><strong>3つのBot設定テキスト</strong>：各Botの名前・説明・カスタム指示の全文をテキストで提出</li>
+<li><strong>テスト入出力テキスト</strong>：3つすべてのBotのテスト入力と出力結果をコピペで提出</li>
+<li><strong>カスタマイズ元と変更点の説明テキスト</strong>：カスタマイズBotについて、元のアイデア（出典）と自分が変更した点の説明</li>
+</ol>
+</div>
+
+<div style="background: #fff3cd; border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
+<strong>注意点</strong>
+<ul style="margin: 5px 0;">
+<li><strong>スクリーンショットでの提出はNGです。</strong>すべての提出物はテキスト（コピペ）で提出してください。採点の自動化・効率化のため、画像での提出は受け付けません。</li>
+<li>ファイル名は <strong>M05-S04_{氏名}</strong> の形式で提出してください</li>
+<li>提出物はすべてテキストで提出してください</li>
+<li>個人情報や機密情報が含まれないよう、テスト入力にはダミーデータを使用してください</li>
+</ul>
+</div>
+
+</body>
+</html>

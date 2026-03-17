@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>解説プレビュー：M5 S1実習課題</title>
+<style>
+body { font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.8; }
+h1 { font-size: 1.5em; border-bottom: 2px solid #333; padding-bottom: 10px; }
+h3 { margin-top: 30px; }
+h4 { margin-top: 25px; color: #333; }
+hr { margin: 20px 0; border: none; border-top: 1px solid #ccc; }
+ul li, ol li { margin-bottom: 10px; }
+.purpose-box { background-color: #e8f4f8; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+.example-box { background-color: #f0f7e6; border-left: 4px solid #27ae60; padding: 15px; margin: 15px 0; white-space: pre-wrap; }
+.check-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+.check-table th, .check-table td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+.check-table th { background-color: #f0f0f0; }
+.supplement-box { background-color: #fff9e6; border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; }
+</style>
+</head>
+<body>
+
+<h1>解説と回答例</h1>
+
+<h3>この課題のねらい</h3>
+<div class="purpose-box">
+<p>この課題には、2つの学習目標があります。</p>
+<ol>
+<li><strong>カスタム指示でBotの出力を制御する力を身につける</strong><br>AIに毎回プロンプトを書くのではなく、あらかじめ指示を設定しておくことで、誰が使っても一定品質の出力を得られるようになります。これは「プロンプトの仕組み化」であり、業務効率化の第一歩です。</li>
+<li><strong>再利用可能なBot設計の基礎を学ぶ</strong><br>GPTsやGemは、一度作れば自分だけでなくチームメンバーにも共有できます。「自分用の便利ツール」を「チームの共有資産」に昇格させる設計思考を養います。</li>
+</ol>
+</div>
+
+<hr>
+
+<h3>提出方法</h3>
+
+<h4>提出物</h4>
+<ol>
+<li><strong>Bot設定テキスト</strong><br>Bot名・説明・カスタム指示の全文をテキストで提出してください。</li>
+<li><strong>テスト入出力テキスト</strong><br>作成したBotに対して2〜3回異なる内容を入力し、その入力と出力の両方をコピペで提出してください。出力フォーマットが一貫していることが確認できる状態にしてください。</li>
+</ol>
+<p>提出物はすべてテキストで提出してください。</p>
+
+<div class="supplement-box">
+<strong>命名規則</strong><br>
+提出ファイル名は <strong>M05-S01_{氏名}</strong> としてください。<br>
+例：M05-S01_山田太郎
+</div>
+
+<h4>提出時チェックリスト</h4>
+<ol>
+<li>Bot名・説明・カスタム指示の全文がテキストで提出されているか</li>
+<li>テスト入出力テキストに入力と出力の両方が含まれているか</li>
+<li>2〜3パターンの異なる入力でテストしているか</li>
+<li>出力フォーマットが各テストで統一されているか</li>
+<li>ファイル名が命名規則に従っているか</li>
+</ol>
+
+<hr>
+
+<h3>採点基準（実践力チェック）</h3>
+<p>合計30点満点で評価します。</p>
+
+<table class="check-table">
+<tr>
+<th>観点</th>
+<th>OK（満点）</th>
+<th>惜しい（半分程度）</th>
+<th>NG（0点）</th>
+</tr>
+<tr>
+<td><strong>①Bot設定の完成度</strong><br>（12点）</td>
+<td>カスタム指示が明確に設定されており、Bot名・説明・指示文が揃っている。指示文にはペルソナ、出力フォーマット、制約条件が含まれている。</td>
+<td>設定は存在するが、指示文が曖昧で意図した出力になりにくい。Bot名や説明が未設定、または指示文が短すぎる。</td>
+<td>設定テキストや指示文が未提出。</td>
+</tr>
+<tr>
+<td><strong>②フォーマット統一</strong><br>（12点）</td>
+<td>複数回テストして一貫したフォーマットで出力されている。異なる入力に対しても同じ構造で出力されていることが確認できる。</td>
+<td>出力はあるがフォーマットにばらつきがある。テスト回数が不足している（1回のみ）。</td>
+<td>テスト実行結果が未提出。</td>
+</tr>
+<tr>
+<td><strong>③実用性と工夫</strong><br>（6点）</td>
+<td>実際の業務で使えそうな実用的なBotになっている。用途が明確で、出力が即座に活用できるレベルに仕上がっている。</td>
+<td>動作はするが汎用的すぎて業務特化になっていない。「何でも聞いてください」のようなBotになっている。</td>
+<td>工夫が見られない。テンプレートをそのまま使っただけ。</td>
+</tr>
+</table>
+
+<div class="supplement-box">
+<strong>提出形式について</strong><br>
+M5の課題はすべて<strong>テキスト提出</strong>です。スクリーンショット（画像）での提出は受け付けません。採点はAIによる自動採点を行うため、テキストで提出されていない場合は採点対象外となります。
+</div>
+
+<hr>
+
+<h3>フィードバックのポイント</h3>
+<div class="supplement-box">
+<p><strong>高評価のケース：</strong><br>
+カスタム指示に「ペルソナ」「出力フォーマット」「制約条件」「出力例」がすべて含まれており、3回のテストですべて同じフォーマットで出力されている場合、満点に近い評価となります。特に、業務で実際に使える具体的な用途（例：週次報告書の自動整形、顧客問い合わせの回答テンプレート生成など）が設定されていると、実用性の観点でも高評価です。</p>
+
+<p><strong>改善が必要なケース：</strong><br>
+指示文が「丁寧に答えてください」「わかりやすく説明してください」のような抽象的な内容のみの場合、フォーマットの統一が難しくなります。具体的な出力形式（項目名、順序、文字数制限など）を指示文に追記するようフィードバックしてください。</p>
+
+<p><strong>再提出を求めるケース：</strong><br>
+Bot設定テキストが未提出、またはテスト実行が1回も行われていない場合は再提出を依頼してください。「Bot名・説明・カスタム指示の全文をテキストで提出し、最低2パターンの入力でテストしてください」と具体的に指示します。</p>
+</div>
+
+<hr>
+
+<div class="purpose-box">
+解説を読んでもいまいちわからない場合は、<a href="https://chatgpt.com/g/g-6839cb0816988191b52c37b9f108e28c-aigou-kou-mosiyu-ru5" target="_blank"><strong>AI溝口 for モジュール5</strong></a> に質問してみましょう。課題の進め方や、カスタム指示の書き方について具体的なアドバイスがもらえます。
+</div>
+
+</body>
+</html>

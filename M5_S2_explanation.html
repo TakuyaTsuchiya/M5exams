@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>解説プレビュー：M5 S2実習課題</title>
+<style>
+body { font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.8; }
+h1 { font-size: 1.5em; border-bottom: 2px solid #333; padding-bottom: 10px; }
+h3 { margin-top: 30px; }
+h4 { margin-top: 25px; color: #333; }
+hr { margin: 20px 0; border: none; border-top: 1px solid #ccc; }
+ul li, ol li { margin-bottom: 10px; }
+.purpose-box { background-color: #e8f4f8; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+.example-box { background-color: #f0f7e6; border-left: 4px solid #27ae60; padding: 15px; margin: 15px 0; white-space: pre-wrap; }
+.check-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+.check-table th, .check-table td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+.check-table th { background-color: #f0f0f0; }
+.supplement-box { background-color: #fff9e6; border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; }
+</style>
+</head>
+<body>
+
+<h1>解説と回答例</h1>
+
+<h3>この課題のねらい</h3>
+
+<div class="purpose-box">
+<ol>
+<li><strong>RAGの仕組みを体験し、AIに正確な知識を与える方法を学ぶ</strong><br>
+通常のチャットAI（ChatGPTなど）は、学習データに含まれない社内情報や最新情報には正確に答えられません。RAG（Retrieval-Augmented Generation：検索拡張生成）は、外部の資料をAIに参照させることで、正確かつ根拠のある回答を生成させる手法です。NotebookLMを使ってこの仕組みを体験することで、「AIに自分の知識を教える」方法を理解します。</li>
+<li><strong>引用付き回答で「AIの回答の根拠」を確認する習慣をつける</strong><br>
+AIの回答をそのまま信じるのではなく、「どの資料のどの部分を根拠にしているか」を確認する習慣は、AIを業務で安全に活用するために不可欠です。NotebookLMの引用機能を通じて、AIの回答を検証するスキルを身につけます。</li>
+</ol>
+</div>
+
+<hr>
+
+<h3>提出方法</h3>
+
+<ol>
+<li>NotebookLMでの引用付き回答（質問と回答の両方）をテキストでコピペして保存する</li>
+<li>模擬テスト（Q&A形式）が3問以上生成された内容をテキストでコピペして保存する</li>
+<li>テキストファイルを指定の場所（LMSまたは共有フォルダ）にアップロードする</li>
+</ol>
+
+<div class="supplement-box">
+<strong>命名規則：</strong>M05-S02_{氏名}<br>
+例：M05-S02_田中太郎
+</div>
+
+<h4>提出前チェックリスト</h4>
+<table class="check-table">
+<tr>
+<th>チェック項目</th>
+<th>確認</th>
+</tr>
+<tr>
+<td>ノートブックに読み込んだソース（資料）の情報がテキストで記載されているか</td>
+<td>□</td>
+</tr>
+<tr>
+<td>資料の内容に基づいた質問をしているか</td>
+<td>□</td>
+</tr>
+<tr>
+<td>回答テキストに引用番号（[1][2]など）が付いていることが確認できるか</td>
+<td>□</td>
+</tr>
+<tr>
+<td>引用元の資料箇所についてテキストで説明されているか</td>
+<td>□</td>
+</tr>
+<tr>
+<td>模擬テストが3問以上生成されているか</td>
+<td>□</td>
+</tr>
+<tr>
+<td>ファイル名が命名規則（M05-S02_{氏名}）に従っているか</td>
+<td>□</td>
+</tr>
+</table>
+
+<hr>
+
+<h3>採点基準（30点満点）</h3>
+
+<table class="check-table">
+<tr>
+<th>観点</th>
+<th>配点</th>
+<th>OK（満点）</th>
+<th>惜しい（半点）</th>
+<th>NG（0点）</th>
+</tr>
+<tr>
+<td><strong>①資料読み込みと質問</strong></td>
+<td>12点</td>
+<td>ノートブックに資料が正しく読み込まれ、資料内容に基づく質問と回答が確認できる</td>
+<td>資料は読み込まれているが、質問が資料と無関係な内容になっている</td>
+<td>未提出</td>
+</tr>
+<tr>
+<td><strong>②引用確認とエビデンス検証</strong></td>
+<td>12点</td>
+<td>回答に引用番号が付き、引用元の資料箇所を確認した様子がわかる</td>
+<td>引用はあるが、引用元の確認がされていない</td>
+<td>未提出</td>
+</tr>
+<tr>
+<td><strong>③模擬テスト作成</strong></td>
+<td>6点</td>
+<td>資料内容に基づく3問以上の模擬テストが生成されている</td>
+<td>模擬テストが2問以下、または資料内容との関連が薄い</td>
+<td>未提出</td>
+</tr>
+</table>
+
+<div class="supplement-box">
+<strong>提出形式について</strong><br>
+M5の課題はすべて<strong>テキスト提出</strong>です。スクリーンショット（画像）での提出は受け付けません。採点はAIによる自動採点を行うため、テキストで提出されていない場合は採点対象外となります。
+</div>
+
+<hr>
+
+<h3>回答例・作業イメージ</h3>
+
+<h4>ソース読み込みの例</h4>
+<div class="example-box">【ノートブック名】社内出張規定Q&A
+
+【アップロードしたソース】
+・出張旅費規程.pdf（全12ページ）
+・出張申請マニュアル.pdf（全8ページ）
+
+→ 左パネルに2件のソースが表示され、それぞれの概要が自動生成される</div>
+
+<h4>質問と引用付き回答の例</h4>
+<div class="example-box">【質問】
+国内出張の日当はいくらですか？役職による違いはありますか？
+
+【NotebookLMの回答】
+国内出張の日当は以下の通りです [1]：
+・一般社員：2,000円/日
+・課長級：2,500円/日
+・部長級以上：3,000円/日
+
+なお、日帰り出張の場合は上記の半額が支給されます [2]。
+宿泊を伴う出張の場合は、日当に加えて宿泊費の実費（上限あり）が支給されます [1]。
+
+[1] 出張旅費規程.pdf - 第5条（日当の支給）
+[2] 出張旅費規程.pdf - 第6条（日帰り出張の取扱い）</div>
+
+<h4>模擬テストの例</h4>
+<div class="example-box">【模擬テスト】資料内容の理解度チェック
+
+Q1. 国内出張の日当について、課長級の1日あたりの支給額はいくらですか？
+A1. 2,500円/日です（出張旅費規程 第5条）
+
+Q2. 出張申請はいつまでに提出する必要がありますか？
+A2. 出張開始日の5営業日前までに、所属長の承認を得て提出する必要があります（出張申請マニュアル 第3章）
+
+Q3. 海外出張の場合、日当の支給額は国内出張と異なりますか？
+A3. はい。海外出張の日当は国内出張の1.5倍が支給されます。ただし、渡航先の物価水準により調整される場合があります（出張旅費規程 第8条）</div>
+
+<hr>
+
+<h3>フィードバックのポイント</h3>
+
+<div class="supplement-box">
+<strong>よくある良い取り組み：</strong>
+<ul>
+<li>自分の業務に直結する資料（業務マニュアル、社内規定など）を使っている → 実務での活用イメージが湧きやすい</li>
+<li>引用元をクリックして、回答の正確性を実際に確認している → AIリテラシーとして非常に重要</li>
+<li>模擬テストの問題を自分で解いてみて、回答の妥当性を検証している</li>
+</ul>
+
+<strong>改善のアドバイス：</strong>
+<ul>
+<li>質問が「要約して」だけで終わっている場合 → 具体的な質問（「〇〇の手順は？」「△△と□□の違いは？」）をすると、引用の精度がわかりやすくなります</li>
+<li>引用番号は表示されているが確認していない場合 → 引用元をクリックして実際の記載と照合する作業こそがRAGの本質です。必ず確認しましょう</li>
+<li>模擬テストが簡単すぎる場合 → 「応用問題を含めて」「実務で判断に迷いそうなケースを問題にして」と指示を追加してみましょう</li>
+</ul>
+
+<strong>発展的な活用：</strong>
+<ul>
+<li>複数の資料を横断した質問をしてみる（例：「規程AとマニュアルBで矛盾している箇所はありますか？」）</li>
+<li>NotebookLMの「Audio Overview」機能で、資料の内容をポッドキャスト形式にまとめてもらう</li>
+<li>業務の引き継ぎ資料やFAQの自動生成に応用できないか考えてみる</li>
+</ul>
+</div>
+
+<hr>
+
+<div class="purpose-box">
+<strong>もっと学びたい方・困ったときは</strong><br>
+AI溝口（モジュール5専用）に質問してみましょう。NotebookLMの使い方やRAGの仕組みについて詳しく教えてくれます。<br>
+<a href="https://chatgpt.com/g/g-6839cb0816988191b52c37b9f108e28c-aigou-kou-mosiyu-ru5" target="_blank">AI溝口 for モジュール5 を開く</a>
+</div>
+
+</body>
+</html>

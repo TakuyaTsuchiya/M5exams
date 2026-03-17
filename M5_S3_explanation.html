@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>解説プレビュー：M5 S3実習課題</title>
+<style>
+body { font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.8; }
+h1 { font-size: 1.5em; border-bottom: 2px solid #333; padding-bottom: 10px; }
+h3 { margin-top: 30px; }
+h4 { margin-top: 25px; color: #333; }
+hr { margin: 20px 0; border: none; border-top: 1px solid #ccc; }
+ul li, ol li { margin-bottom: 10px; }
+.purpose-box { background-color: #e8f4f8; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+.example-box { background-color: #f0f7e6; border-left: 4px solid #27ae60; padding: 15px; margin: 15px 0; white-space: pre-wrap; }
+.check-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+.check-table th, .check-table td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+.check-table th { background-color: #f0f0f0; }
+.supplement-box { background-color: #fff9e6; border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; }
+</style>
+</head>
+<body>
+
+<h1>解説と回答例</h1>
+
+<h3>この課題のねらい</h3>
+<div class="purpose-box">
+<ol>
+<li><strong>複数のAI機能を組み合わせた高機能アシスタントの構築方法を学ぶ</strong><br>Web検索と画像生成という異なる機能を1つのGemに統合し、単一機能では実現できない高度なアシスタントを構築する力を身につけます。</li>
+<li><strong>NotebookLMとGeminiの連携で「社内知識＋最新Web情報」を統合する力を身につける</strong><br>NotebookLMに蓄積した社内資料とWeb上の最新情報を組み合わせることで、より正確で実用的な調査レポートを作成するスキルを習得します。</li>
+</ol>
+</div>
+
+<hr>
+
+<h3>提出方法</h3>
+<ol>
+<li>Gem設定テキストを提出する（Gem名・カスタム指示の全文、Web検索ON・画像生成ONの設定状況を明記）</li>
+<li>調査レポートをテキストでコピペして提出する（引用・Web検索結果・生成画像の説明が確認できる状態）</li>
+<li>共有設定に関する説明を含める</li>
+<li>すべてをテキストでまとめて提出する</li>
+</ol>
+
+<div class="supplement-box">
+<strong>命名規則</strong><br>
+提出ファイルは <strong>M05-S03_{氏名}</strong> の形式で命名してください。<br>
+（例：M05-S03_山田太郎）
+</div>
+
+<h4>提出前チェックリスト</h4>
+<ul>
+<li>Gemが作成され、Gem名とカスタム指示が設定されているか</li>
+<li>Web検索と画像生成の両方がONになっているか</li>
+<li>NotebookLMのノートブックとの連携が設定されているか</li>
+<li>調査レポートにWeb検索結果とNotebookLM引用が含まれているか</li>
+<li>画像生成による図解やイメージ画像がレポートに含まれているか</li>
+<li>共有設定が適切に確認されているか</li>
+<li>提出物がすべてテキストで記載されているか</li>
+<li>機密情報や個人情報が含まれていないか</li>
+</ul>
+
+<hr>
+
+<h3>採点基準</h3>
+<p>この課題は <strong>30点満点</strong> で採点します。</p>
+
+<table class="check-table">
+<tr>
+<th style="width: 20%;">観点</th>
+<th style="width: 10%;">配点</th>
+<th style="width: 25%;">OK</th>
+<th style="width: 25%;">惜しい</th>
+<th style="width: 20%;">NG</th>
+</tr>
+<tr>
+<td><strong>①機能設定の完成度</strong></td>
+<td>12点</td>
+<td>Gemが作成され、Web検索・画像生成が有効化され、カスタム指示も適切に設定されている</td>
+<td>Gemは作成されているが、一部機能（Web検索または画像生成）がOFFのまま</td>
+<td>未提出</td>
+</tr>
+<tr>
+<td><strong>②NotebookLM連携と調査結果</strong></td>
+<td>12点</td>
+<td>NotebookLMの資料を参照した調査レポートが生成され、引用と最新Web情報が組み合わされている</td>
+<td>レポートはあるが、NotebookLM連携が不十分（引用がない、またはWeb検索結果のみ）</td>
+<td>未提出</td>
+</tr>
+<tr>
+<td><strong>③セキュリティ設定</strong></td>
+<td>6点</td>
+<td>共有範囲が適切に設定され、その理由も説明できている</td>
+<td>共有設定の確認をしていない</td>
+<td>未提出</td>
+</tr>
+</table>
+
+<div class="supplement-box">
+<strong>提出形式について</strong><br>
+M5の課題はすべて<strong>テキスト提出</strong>です。スクリーンショット（画像）での提出は受け付けません。採点はAIによる自動採点を行うため、テキストで提出されていない場合は採点対象外となります。
+</div>
+
+<hr>
+
+<h3>フィードバックのポイント</h3>
+
+<div class="supplement-box">
+<strong>よくある改善ポイント</strong>
+<ul>
+<li><strong>カスタム指示が曖昧</strong>：「調査して」だけでは出力が安定しません。出力フォーマット、情報源の明記ルール、図解の生成指示など、具体的に記述することで品質が向上します。</li>
+<li><strong>NotebookLM連携が形だけ</strong>：ノートブックを接続しただけでは不十分です。レポート内にNotebookLMの資料からの具体的な引用が含まれているか確認しましょう。</li>
+<li><strong>画像生成を活用していない</strong>：テキストだけのレポートではなく、テーマに関連する図解やイメージ画像を生成させることで、レポートの説得力が大幅に向上します。</li>
+<li><strong>共有設定の意識が低い</strong>：業務で使うAIアシスタントでは、情報漏洩リスクを常に意識する必要があります。共有範囲の設定理由を説明できるようにしましょう。</li>
+<li><strong>複数機能の連携が弱い</strong>：Web検索・NotebookLM引用・画像生成がバラバラではなく、1つのレポートの中で有機的に組み合わされていることが理想です。</li>
+</ul>
+</div>
+
+<hr>
+
+<div class="purpose-box">
+<strong>AI溝口 for モジュール5</strong><br>
+課題に関する質問や不明点がある場合は、以下のAIアシスタントに相談できます。<br>
+<a href="https://chatgpt.com/g/g-6839cb0816988191b52c37b9f108e28c-aigou-kou-mosiyu-ru5" target="_blank">AI溝口 for モジュール5を開く</a>
+</div>
+
+</body>
+</html>

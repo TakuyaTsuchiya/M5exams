@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>解説プレビュー：M5 S4実習課題</title>
+<style>
+body { font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.8; }
+h1 { font-size: 1.5em; border-bottom: 2px solid #333; padding-bottom: 10px; }
+h3 { margin-top: 30px; }
+h4 { margin-top: 25px; color: #333; }
+hr { margin: 20px 0; border: none; border-top: 1px solid #ccc; }
+ul li, ol li { margin-bottom: 10px; }
+.purpose-box { background-color: #e8f4f8; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+.example-box { background-color: #f0f7e6; border-left: 4px solid #27ae60; padding: 15px; margin: 15px 0; white-space: pre-wrap; }
+.check-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+.check-table th, .check-table td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+.check-table th { background-color: #f0f0f0; }
+.supplement-box { background-color: #fff9e6; border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; }
+</style>
+</head>
+<body>
+
+<h1>解説と回答例</h1>
+
+<h3>この課題のねらい</h3>
+<div class="purpose-box">
+<ol>
+<li><strong>既存事例の「骨組み」を見抜き再利用する力</strong>：他人が作ったBotの構造（目的・入力・出力形式・指示の要点）を分析し、応用可能なパターンとして抽出できるようになる</li>
+<li><strong>自分の業務に合わせたBot設計の実践力</strong>：抽出した骨組みを自分の業務課題に当てはめてカスタマイズし、実用的なBotを設計・構築できるようになる</li>
+</ol>
+</div>
+
+<hr>
+
+<h3>提出方法</h3>
+<ol>
+<li>3つのBot設定テキストを提出する（各Botの名前・説明・カスタム指示の全文）</li>
+<li>3つすべてのBotのテスト入出力テキストを提出する（入力と出力をコピペ）</li>
+<li>カスタマイズBotについて、元のアイデア（出典）と自分が変更した点を説明するテキストを作成する</li>
+<li>上記をまとめて提出する</li>
+</ol>
+
+<div class="supplement-box">
+<strong>命名規則</strong><br>
+ファイル名は <strong>M05-S04_{氏名}</strong> の形式で提出してください。<br>
+例：M05-S04_山田太郎
+</div>
+
+<h4>提出前チェックリスト</h4>
+<ul>
+<li>3つのBotがすべて作成されているか</li>
+<li>各Botの設定テキスト（Bot名・カスタム指示の全文）が提出されているか</li>
+<li>3つすべてのBotについてテスト入出力テキストがあるか</li>
+<li>少なくとも1つのBotが他人のアイデアをカスタマイズしたものになっているか</li>
+<li>カスタマイズ元と変更点の説明テキストが含まれているか</li>
+<li>個人情報や機密情報が含まれていないか</li>
+</ul>
+
+<hr>
+
+<h3>採点基準（30点満点）</h3>
+<table class="check-table">
+<tr>
+<th>観点</th>
+<th>配点</th>
+<th>OK</th>
+<th>惜しい</th>
+<th>NG</th>
+</tr>
+<tr>
+<td>①3つのBot作成</td>
+<td>12点</td>
+<td>3つのBotが作成され設定画面が提出されている</td>
+<td>2つ以下しか作成されていない</td>
+<td>未提出</td>
+</tr>
+<tr>
+<td>②テスト実行と実用性</td>
+<td>12点</td>
+<td>全Botのテスト結果が提出され実用的な出力になっている</td>
+<td>テスト結果はあるが出力が実用的でない</td>
+<td>未提出</td>
+</tr>
+<tr>
+<td>③カスタマイズの工夫</td>
+<td>6点</td>
+<td>元のアイデアと変更点が明確で業務に合った改変がされている</td>
+<td>カスタマイズの説明が不十分</td>
+<td>未提出</td>
+</tr>
+</table>
+
+<div class="supplement-box">
+<strong>提出形式について</strong><br>
+M5の課題はすべて<strong>テキスト提出</strong>です。スクリーンショット（画像）での提出は受け付けません。採点はAIによる自動採点を行うため、テキストで提出されていない場合は採点対象外となります。
+</div>
+
+<hr>
+
+<h3>フィードバックのポイント</h3>
+<div class="supplement-box">
+<ul>
+<li><strong>骨組みの抽出が的確か</strong>：元のBot事例から「目的・入力・出力形式・指示の要点」を正しく抜き出せているか。表面的なコピーではなく、構造レベルで理解しているかを確認する</li>
+<li><strong>カスタマイズに独自性があるか</strong>：単に名前を変えただけでなく、自分の業務に合わせて入力形式・出力フォーマット・ペルソナなどを具体的に変更しているか</li>
+<li><strong>3つのBotにバリエーションがあるか</strong>：似たようなBotを3つ作るのではなく、異なる業務課題に対応するBotになっているか</li>
+<li><strong>テスト結果が実用的か</strong>：テスト入力が実際の業務を想定した内容になっており、出力が業務で使えるクオリティになっているか</li>
+</ul>
+</div>
+
+<hr>
+
+<div class="purpose-box">
+<strong>AIアシスタントを活用しよう</strong><br>
+課題に取り組む際、AI溝口（モジュール5専用）に質問や相談ができます。Bot設計のヒントやカスタム指示の書き方で迷ったら活用してください。<br><br>
+<a href="https://chatgpt.com/g/g-6839cb0816988191b52c37b9f108e28c-aigou-kou-mosiyu-ru5" target="_blank">AI溝口 for モジュール5を開く</a>
+</div>
+
+</body>
+</html>

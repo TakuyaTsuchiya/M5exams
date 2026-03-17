@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>問題文プレビュー：M5 S2実習課題</title>
+<style>
+body { font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; color: #525252; line-height: 1.6; }
+h1 { font-size: 24px; border-bottom: 2px solid #333; padding-bottom: 10px; }
+h3 { font-size: 18px; margin-top: 30px; }
+h4 { font-size: 16px; margin-top: 20px; }
+hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
+.instruction-box { background-color: #f5f5f5; border-left: 4px solid #999; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+.tip-box { background-color: #e8f4f8; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+.warning-box { background-color: #fff9e6; border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+.purpose-box { background-color: #e8f4f8; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+</style>
+</head>
+<body>
+
+<h1>NotebookLMで正確な回答を作ろう</h1>
+
+<p><strong>セクション：</strong>S2 NotebookLM／RAG（50分・中）</p>
+
+<h3>目的</h3>
+<p>RAG（Retrieval-Augmented Generation） ── 外部知識をAIに与えて正確な回答を得る方法を学びます。Google NotebookLMを使って、自分がアップロードした資料をもとにAIが回答する「資料ベースのQ&A」を体験しましょう。通常のチャットAIは学習データにない情報には答えられませんが、RAGの仕組みを使えば「自分だけの専門知識を持ったAI」を作ることができます。</p>
+
+<h3>課題</h3>
+<p>NotebookLMに業務資料やマニュアル等を読み込ませ、引用付きの正確な回答を得てください。さらに、資料内容に基づく模擬テスト（Q&A形式）を3問以上生成してください。</p>
+
+<div class="instruction-box">
+<strong>NotebookLMとは？</strong><br>
+Google が提供する無料のAIノートブックツールです。PDF・Googleドキュメント・Webページなどをソースとしてアップロードすると、その資料の内容だけを根拠にAIが回答してくれます。回答には必ず引用（ソース番号）が付くため、「AIがどこを参考にして答えたか」を確認できるのが特徴です。<br>
+<strong>アクセス先：</strong><a href="https://notebooklm.google.com/" target="_blank">https://notebooklm.google.com/</a>（Googleアカウントでログイン）
+</div>
+
+<hr>
+
+<h3>手順</h3>
+
+<h4>ステップ① ノートブックの作成</h4>
+<p>NotebookLM（<a href="https://notebooklm.google.com/" target="_blank">https://notebooklm.google.com/</a>）にGoogleアカウントでアクセスし、「新しいノートブック」をクリックして作成します。ノートブック名は自由ですが、内容がわかりやすい名前（例：「社内マニュアルQ&A」「製品仕様書」など）を付けましょう。</p>
+
+<div class="instruction-box">
+<strong>操作手順：</strong><br>
+1. NotebookLMのトップページにアクセスする<br>
+2. 「＋新しいノートブック」ボタンをクリック<br>
+3. ノートブックが作成され、ソース追加の画面が表示される
+</div>
+
+<h4>ステップ② 資料のアップロード</h4>
+<p>作成したノートブックにソース（資料）を追加します。PDF、Googleドキュメント、Googleスライド、WebページのURLなどをソースとして追加できます。自分の業務に関連する資料を使うことを推奨します。資料がない場合は、社内マニュアルや規定文書のサンプル、あるいは公開されている行政文書やガイドラインなどでもOKです。</p>
+
+<div class="instruction-box">
+<strong>操作手順：</strong><br>
+1. 左パネルの「ソースを追加」（＋ボタン）をクリック<br>
+2. アップロード方法を選択（PDF、Googleドキュメント、Webサイト等）<br>
+3. ファイルを選択またはURLを入力してアップロード<br>
+4. ソースが読み込まれると左パネルにソース名が表示される
+</div>
+
+<div class="tip-box">
+<strong>💡 ヒント：</strong>複数のソースを追加すると、NotebookLMはすべてのソースを横断して回答してくれます。関連する資料を2〜3件アップロードすると、より実践的な体験ができます。
+</div>
+
+<div class="warning-box">
+<strong>⚠️ 注意：</strong>NotebookLMは無料で使えますが、アップロードした資料はGoogleのサーバーに保存されます。機密情報を含む資料は使わないでください。練習用には公開情報や、機密性のないサンプル資料を使用しましょう。
+</div>
+
+<h4>ステップ③ 質問と引用確認</h4>
+<p>資料の内容について質問し、回答に引用（ソース番号）が付いていることを確認します。引用番号をクリックして、元の資料のどの箇所を根拠にしているかを確認してください。</p>
+
+<div class="instruction-box">
+<strong>操作手順：</strong><br>
+1. 画面下部のチャット欄に、資料の内容に関する質問を入力する<br>
+　例：「この資料の要点を3つにまとめてください」「〇〇の手続きの流れを教えてください」<br>
+2. AIの回答を確認する ── 回答文中に [1] [2] のような引用番号が表示される<br>
+3. 引用番号をクリックし、元の資料の該当箇所がハイライトされることを確認する<br>
+4. 引用元の内容と回答が一致しているかを検証する
+</div>
+
+<div class="tip-box">
+<strong>💡 ヒント：</strong>「この回答の根拠は？」「もっと詳しく説明して」など追加質問をすると、AIがさらに資料を掘り下げて回答してくれます。引用元が正しいかどうかを確認する習慣をつけましょう。これは実務でAIを活用する際にとても重要なスキルです。
+</div>
+
+<h4>ステップ④ 模擬テストの生成</h4>
+<p>NotebookLMに「この資料の内容から3問以上の模擬テスト（Q&A形式）を作って」と依頼します。生成されたテストが資料の内容に基づいているか確認しましょう。</p>
+
+<div class="instruction-box">
+<strong>操作手順：</strong><br>
+1. チャット欄に以下のようなプロンプトを入力する<br>
+　例：「この資料の内容をもとに、理解度を確認するための模擬テストを3問以上、Q&A形式で作成してください」<br>
+2. 生成された模擬テストの内容を確認する<br>
+3. 各問題が資料の内容に基づいているか、引用を確認する<br>
+4. 必要に応じて「もう少し難しい問題を追加して」「選択式にして」など指示を追加する
+</div>
+
+<div class="tip-box">
+<strong>💡 ヒント：</strong>NotebookLMの画面上部にある「スタディガイド」や「FAQ」の自動生成機能も試してみましょう。資料の内容をさまざまな形式でまとめてくれます。
+</div>
+
+<hr>
+
+<h3>成果物</h3>
+
+<div class="purpose-box">
+<strong>提出物：</strong>
+<ol>
+<li><strong>引用付き回答テキスト</strong><br>
+資料に基づく質問と、引用番号付きの回答をコピペで提出</li>
+<li><strong>模擬テスト3問以上のテキスト</strong><br>
+NotebookLMが生成した模擬テスト（Q&A形式）を3問以上コピペで提出</li>
+</ol>
+<p><strong>ファイル命名規則：</strong>M05-S02_{氏名}</p>
+</div>
+
+<div style="background: #fff3cd; border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
+<strong>注意点</strong>
+<ul style="margin: 5px 0;">
+<li><strong>スクリーンショットでの提出はNGです。</strong>すべての提出物はテキスト（コピペ）で提出してください。採点の自動化・効率化のため、画像での提出は受け付けません。</li>
+<li>ファイル名は指定の命名規則に従ってください</li>
+<li>個人情報や機密情報が含まれないよう、テスト入力にはダミーデータを使用してください</li>
+</ul>
+</div>
+
+</body>
+</html>

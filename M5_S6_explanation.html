@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>解説プレビュー：M5 S6実習課題</title>
+<style>
+body { font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.8; }
+h1 { font-size: 1.5em; border-bottom: 2px solid #333; padding-bottom: 10px; }
+h3 { margin-top: 30px; }
+h4 { margin-top: 25px; color: #333; }
+hr { margin: 20px 0; border: none; border-top: 1px solid #ccc; }
+ul li, ol li { margin-bottom: 10px; }
+.purpose-box { background-color: #e8f4f8; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+.example-box { background-color: #f0f7e6; border-left: 4px solid #27ae60; padding: 15px; margin: 15px 0; white-space: pre-wrap; }
+.check-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+.check-table th, .check-table td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+.check-table th { background-color: #f0f0f0; }
+.supplement-box { background-color: #fff9e6; border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; }
+</style>
+</head>
+<body>
+
+<h1>解説と回答例</h1>
+
+<h3>この課題のねらい</h3>
+
+<div class="purpose-box">
+<ol>
+<li><strong>設計図を実際に動くシステムとして実装する力を身につける</strong><br>
+S5で作成したフローチャート（設計図）を、Google Workspaceの自動化機能を使って実際に動くワークフローとして構築します。「考えたこと」を「動くもの」にする体験を通じて、設計と実装のギャップを理解し、実装力を高めます。</li>
+<li><strong>エラー対処を通じて「AIと協力したデバッグ」の方法を学ぶ</strong><br>
+ワークフローの構築では、エラーやうまくいかない場面が必ず発生します。エラーメッセージを読み、AIに相談しながら原因を特定・修正するプロセスを体験することで、「AIと協力した問題解決」のスキルを身につけます。</li>
+</ol>
+</div>
+
+<hr>
+
+<h3>提出方法</h3>
+
+<ol>
+<li>GWSで構築したワークフローの設定内容（構築方法・トリガー・処理・出力）をテキストで記録する。コードを書いた場合はコードも含める</li>
+<li>テストデータを使った実行結果（入力と出力の両方）をテキストでコピペして保存する</li>
+<li>エラーが発生した場合は、エラー内容と対処法をテキストで記録する</li>
+<li>テキストファイルを指定の場所（LMSまたは共有フォルダ）にアップロードする</li>
+</ol>
+
+<div class="supplement-box">
+<strong>命名規則：</strong>M05-S06_{氏名}<br>
+例：M05-S06_田中太郎
+</div>
+
+<h4>提出前チェックリスト</h4>
+<table class="check-table">
+<tr>
+<th>チェック項目</th>
+<th>確認</th>
+</tr>
+<tr>
+<td>ワークフローの設定内容（トリガー・処理・出力）がテキストで記載されているか</td>
+<td>□</td>
+</tr>
+<tr>
+<td>テスト実行の結果（入力と出力の両方）がテキストで提出されているか</td>
+<td>□</td>
+</tr>
+<tr>
+<td>エラーが発生した場合、対処の記録が含まれているか</td>
+<td>□</td>
+</tr>
+<tr>
+<td>個人情報や機密情報が提出物に含まれていないか</td>
+<td>□</td>
+</tr>
+<tr>
+<td>ファイル名が命名規則（M05-S06_{氏名}）に従っているか</td>
+<td>□</td>
+</tr>
+</table>
+
+<hr>
+
+<h3>採点基準（30点満点）</h3>
+
+<table class="check-table">
+<tr>
+<th>観点</th>
+<th>配点</th>
+<th>OK（満点）</th>
+<th>惜しい（半点）</th>
+<th>NG（0点）</th>
+</tr>
+<tr>
+<td><strong>①ワークフロー構築</strong></td>
+<td>12点</td>
+<td>トリガー・処理・出力が設定されたワークフローが構築されている</td>
+<td>一部設定が不完全（例：トリガーは設定されているが出力設定がない等）</td>
+<td>未提出</td>
+</tr>
+<tr>
+<td><strong>②テスト実行と結果</strong></td>
+<td>12点</td>
+<td>テスト実行して期待通りの結果が得られている</td>
+<td>テストは実行したがエラーが解消されていない</td>
+<td>未提出</td>
+</tr>
+<tr>
+<td><strong>③トラブルシューティング/工夫</strong></td>
+<td>6点</td>
+<td>エラー対処の過程が記録されている、または追加の工夫がある</td>
+<td>エラーは出たが対処の記録がない</td>
+<td>未提出</td>
+</tr>
+</table>
+
+<div class="supplement-box">
+<strong>提出形式について</strong><br>
+M5の課題はすべて<strong>テキスト提出</strong>です。スクリーンショット（画像）での提出は受け付けません。採点はAIによる自動採点を行うため、テキストで提出されていない場合は採点対象外となります。
+</div>
+
+<hr>
+
+<h3>回答例・作業イメージ</h3>
+
+<h4>方法A（Apps Scriptテンプレート活用）の例</h4>
+<div class="example-box">【ワークフロー概要】
+Googleフォームで受け付けた問い合わせ内容をGemini APIで自動分類し、スプレッドシートに記録する
+
+【トリガー】
+Googleフォーム送信時（onFormSubmit）
+
+【処理内容】
+1. フォームの回答データを取得
+2. Gemini APIに問い合わせ内容を送信し、カテゴリ（「技術的質問」「料金について」「その他」）を自動分類
+3. 分類結果とともにスプレッドシートの該当行に書き込み
+
+【出力】
+スプレッドシートの「分類」列に自動分類結果を記入
+
+【テスト結果】
+テストデータ：「商品Aの月額料金を教えてください」
+→ 分類結果：「料金について」 ✓ 期待通り</div>
+
+<h4>方法B（AppSheet活用）の例</h4>
+<div class="example-box">【ワークフロー概要】
+日報をAppSheetアプリから入力し、自動で要約を生成してマネージャーにメール送信する
+
+【トリガー】
+AppSheetアプリで日報データが新規追加された時
+
+【処理内容】
+1. 新規追加された日報データを取得
+2. Gemini for Google Workspaceで日報内容の要約を生成
+3. 要約文をメール本文に整形
+
+【出力】
+マネージャーのメールアドレスに要約付き日報を自動送信
+
+【テスト結果】
+テストデータ：日報（業務内容3件、課題1件を記入）
+→ 要約メールが正しく送信されたことを確認 ✓</div>
+
+<h4>トラブルシューティングの記録例</h4>
+<div class="example-box">【発生したエラー】
+TypeError: Cannot read properties of undefined (reading 'getRange')
+
+【原因調査】
+・Apps Scriptの実行ログを確認
+・エラー行を特定（12行目）
+・AIに相談：「スプレッドシートのシート名が間違っている可能性がある」と回答
+
+【対処】
+・シート名を「Sheet1」→「回答」に修正
+・再テスト → 正常に動作することを確認
+
+【学び】
+シート名はデフォルトの「シート1」ではなく、実際のシート名を正確に指定する必要がある</div>
+
+<hr>
+
+<h3>フィードバックのポイント</h3>
+
+<div class="supplement-box">
+<strong>よくある良い取り組み：</strong>
+<ul>
+<li>S5の設計図と実装結果を比較し、設計通りに動作していることを確認している → 設計と実装の一貫性が取れている</li>
+<li>エラーが出た時にAIに相談し、対話しながらデバッグしている → AIと協力した問題解決のスキルが身についている</li>
+<li>テストデータを複数パターン用意し、様々なケースで動作確認している → 品質の高いテストができている</li>
+</ul>
+
+<strong>改善のアドバイス：</strong>
+<ul>
+<li>ワークフローが動いたが設定内容だけの場合 → テスト実行の結果（入力と出力の両方）も必ずテキストで提出しましょう</li>
+<li>エラーが出てそのまま提出している場合 → エラーメッセージをAIにコピー&ペーストして相談すれば、多くの場合解決策が得られます</li>
+<li>テストデータが「テスト」だけの場合 → 実際の業務を想定した具体的な入力データを使いましょう。AIの処理精度の評価にもつながります</li>
+</ul>
+
+<strong>発展的な活用：</strong>
+<ul>
+<li>複数のワークフローを連携させてみる（例：フォーム→分類→担当者に自動アサイン→通知）</li>
+<li>エラーハンドリングを組み込む（例：API呼び出しが失敗した場合のリトライ処理）</li>
+<li>定期実行のトリガーを設定し、日次・週次の自動レポート生成に応用する</li>
+</ul>
+</div>
+
+<hr>
+
+<div class="purpose-box">
+<strong>もっと学びたい方・困ったときは</strong><br>
+AI溝口（モジュール5専用）に質問してみましょう。GWSでのワークフロー構築やApps Scriptの書き方について詳しく教えてくれます。<br>
+<a href="https://chatgpt.com/g/g-6839cb0816988191b52c37b9f108e28c-aigou-kou-mosiyu-ru5" target="_blank">AI溝口 for モジュール5 を開く</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>問題文プレビュー：M5 S5実習課題</title>
+<style>
+body { font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; color: #525252; line-height: 1.6; }
+h1 { font-size: 24px; border-bottom: 2px solid #333; padding-bottom: 10px; }
+h3 { font-size: 18px; margin-top: 30px; }
+h4 { font-size: 16px; margin-top: 20px; }
+hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
+.instruction-box { background-color: #f5f5f5; border-left: 4px solid #999; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+.tip-box { background-color: #e8f4f8; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+.warning-box { background-color: #fff9e6; border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+.purpose-box { background-color: #e8f4f8; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+</style>
+</head>
+<body>
+
+<h1>Mermaidで業務フロー設計図を作ろう</h1>
+
+<p><strong>セクション：</strong>S5 ワークフロー設計（50分・中）</p>
+
+<h3>目的</h3>
+<p>自動化したい業務を「見える化」し、Mermaid記法でフローチャートを作成する力を身につける。ワークフロー実装の前段階として設計図を作る重要性を学ぶ。</p>
+
+<h3>課題</h3>
+<p>自分の日常業務から「自動化したい仕事」を1つ選び、その業務フローをMermaid記法でフローチャートにする。さらに、各ステップの入出力を定義する。</p>
+
+<hr>
+
+<h3>手順</h3>
+
+<h4>ステップ① 自動化対象の選定</h4>
+<p>日常業務の中から「繰り返し行っている」「手順が決まっている」「時間がかかる」作業を1つ選ぶ。例：毎週の報告書作成、問い合わせメールの振り分け、データ集計と報告等。</p>
+
+<div class="tip-box">
+<strong>選定のコツ：</strong>「毎回同じ手順でやっている」「人によってやり方が違うと困る」「ミスが起きやすい」と感じる業務は、自動化の良い候補です。最初から大きな業務を選ばず、15分〜30分程度で完了する小さな作業から始めましょう。
+</div>
+
+<h4>ステップ② 業務の流れを箇条書きにする</h4>
+<p>選んだ業務を「開始→処理1→判断→処理2→終了」のように箇条書きで書き出す。分岐がある場合は条件も書く。</p>
+
+<div class="instruction-box">
+<strong>箇条書きの例：</strong><br>
+1. メールを受信する<br>
+2. 件名に「見積依頼」が含まれるか確認する<br>
+3. 含まれる場合→見積テンプレートを添付して返信する<br>
+4. 含まれない場合→担当者に転送する<br>
+5. 対応履歴をスプレッドシートに記録する
+</div>
+
+<h4>ステップ③ AIにMermaid記法を生成してもらう</h4>
+<p>ChatGPTやGeminiに箇条書きを渡して「Mermaid記法のフローチャートに変換して」と依頼する。</p>
+
+<div class="instruction-box">
+<strong>AIへのプロンプト例：</strong><br><br>
+<code style="background-color: #e8e8e8; padding: 10px; display: block; white-space: pre-wrap; border-radius: 4px;">以下の業務フローをMermaid記法のフローチャートに変換してください。
+分岐がある場合はダイヤモンド記号を使ってください。
+
+1. メールを受信する
+2. 件名に「見積依頼」が含まれるか確認
+3. 含まれる場合→見積テンプレートを添付して返信
+4. 含まれない場合→担当者に転送</code>
+</div>
+
+<h4>ステップ④ プレビューで確認する</h4>
+<p>Mermaid Live Editor（<a href="https://mermaid.live" target="_blank">mermaid.live</a>）にコードを貼り付けてフローチャートが正しく表示されるか確認する。必要に応じて修正する。</p>
+
+<div class="tip-box">
+<strong>確認ポイント：</strong>フローチャートが正しく描画されるか、分岐の条件が明確か、抜けているステップがないかを確認しましょう。エラーが出る場合はAIにエラー内容を伝えて修正を依頼してください。
+</div>
+
+<h4>ステップ⑤ 入出力定義を作成する</h4>
+<p>フローチャートの各ステップについて「何が入力で、何が出力か」を表形式で整理する。</p>
+
+<div class="instruction-box">
+<strong>入出力定義の例：</strong><br><br>
+<table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+<tr style="background-color: #e8e8e8;">
+<th style="border: 1px solid #ccc; padding: 8px; text-align: left;">ステップ</th>
+<th style="border: 1px solid #ccc; padding: 8px; text-align: left;">入力</th>
+<th style="border: 1px solid #ccc; padding: 8px; text-align: left;">出力</th>
+</tr>
+<tr>
+<td style="border: 1px solid #ccc; padding: 8px;">メール受信</td>
+<td style="border: 1px solid #ccc; padding: 8px;">受信メール（件名・本文・送信者）</td>
+<td style="border: 1px solid #ccc; padding: 8px;">メールデータ</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ccc; padding: 8px;">件名判定</td>
+<td style="border: 1px solid #ccc; padding: 8px;">メールの件名</td>
+<td style="border: 1px solid #ccc; padding: 8px;">判定結果（見積依頼 or その他）</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ccc; padding: 8px;">見積返信</td>
+<td style="border: 1px solid #ccc; padding: 8px;">送信者アドレス・見積テンプレート</td>
+<td style="border: 1px solid #ccc; padding: 8px;">返信メール</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ccc; padding: 8px;">担当者転送</td>
+<td style="border: 1px solid #ccc; padding: 8px;">メールデータ・担当者アドレス</td>
+<td style="border: 1px solid #ccc; padding: 8px;">転送メール</td>
+</tr>
+</table>
+</div>
+
+<hr>
+
+<h3>成果物</h3>
+
+<div class="purpose-box">
+<strong>提出物：</strong>
+<ol>
+<li><strong>Mermaidフローチャート（テキスト）</strong><br>
+Mermaid記法で記述したフローチャートのテキストコードを提出</li>
+<li><strong>入出力定義テキスト</strong><br>
+フローチャートの各ステップについて、入力と出力を整理した表形式のテキスト</li>
+</ol>
+<p><strong>ファイル命名規則：</strong>M05-S05_{氏名}</p>
+</div>
+
+<div class="warning-box">
+<strong>注意：</strong>Mermaidコードは必ずテキストとして提出してください。入出力定義は各ステップについて「何が入力で、何が出力か」が具体的にわかるように記述してください。
+</div>
+
+<div style="background: #fff3cd; border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
+<strong>注意点</strong>
+<ul style="margin: 5px 0;">
+<li><strong>スクリーンショットでの提出はNGです。</strong>すべての提出物はテキスト（コピペ）で提出してください。採点の自動化・効率化のため、画像での提出は受け付けません。</li>
+<li>ファイル名は指定の命名規則に従ってください</li>
+<li>個人情報や機密情報が含まれないよう、テスト入力にはダミーデータを使用してください</li>
+</ul>
+</div>
+
+</body>
+</html>

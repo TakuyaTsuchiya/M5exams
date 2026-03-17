@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>問題文プレビュー：M5 S6実習課題</title>
+<style>
+body { font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; color: #525252; line-height: 1.6; }
+h1 { font-size: 24px; border-bottom: 2px solid #333; padding-bottom: 10px; }
+h3 { font-size: 18px; margin-top: 30px; }
+h4 { font-size: 16px; margin-top: 20px; }
+hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
+</style>
+</head>
+<body>
+
+<h1>GWSで設計図から動くシステムを作ろう</h1>
+
+<h3>目的</h3>
+<p>S5で作成した設計図（フローチャート）を実際に動くワークフローとして実装する。Google Workspaceの自動化機能を使い、トリガー→処理→出力の一連の流れを構築・テストする体験を通じて、設計から実装までの一連のプロセスを理解する。</p>
+
+<h3>課題</h3>
+<p>S5で設計したフローチャートをもとに、GWS（Google Workspace）でワークフローを構築する。テスト実行して正しく動作することを確認し、エラーが出た場合はトラブルシューティングも行う。</p>
+
+<hr>
+
+<h3>手順</h3>
+
+<h4>ステップ① ワークフローの構築方法を選ぶ</h4>
+<p>以下のいずれかの方法でワークフローを構築する。自分のスキルレベルに合った方法を選ぶ。</p>
+
+<div style="background: #f5f5f5; border-left: 4px solid #666; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
+<strong>構築方法の選択肢</strong><br><br>
+<strong>方法A（初心者向け）：Google Apps Scriptのテンプレートを活用</strong><br>
+講義で紹介したテンプレートや、AIに相談して生成したコードをベースにワークフローを構築する。コードの中身を完全に理解できなくてもOK。<br><br>
+<strong>方法B（中級者向け）：AppSheetでノーコードワークフローを構築</strong><br>
+AppSheetを使い、ノーコードでワークフローを構築する。スプレッドシートをデータソースにして、自動化ルールを設定する。<br><br>
+<strong>方法C（上級者向け）：AIに相談しながらApps Scriptをゼロから書く</strong><br>
+AIと対話しながら、自分の業務に完全にカスタマイズしたApps Scriptをゼロから作成する。
+</div>
+
+<h4>ステップ② トリガーの設定</h4>
+<p>ワークフローの「きっかけ」を設定する。例：フォーム送信時に自動実行、スプレッドシートの特定セルが更新された時に実行、毎日決まった時刻に定時実行、等。S5の設計図で定義した「入力トリガー」に対応する設定を行う。</p>
+
+<h4>ステップ③ AI処理の組み込み</h4>
+<p>ワークフローの中にAI処理を組み込む。例：Gemini APIを使ったテキスト要約、分類、返信文の生成等。講義で学んだプロンプト設計を活用し、安定した出力が得られるように工夫する。</p>
+
+<h4>ステップ④ 出力設定</h4>
+<p>処理結果の出力先を設定する。例：スプレッドシートに書き込み、メール送信、Slackに通知等。S5の設計図で定義した「出力」に対応する設定を行う。</p>
+
+<h4>ステップ⑤ テスト実行</h4>
+<p>テストデータを使ってワークフローを実行し、期待通りの結果が得られるか確認する。入力から出力まで一連の流れが正しく動作することを検証する。</p>
+
+<h4>ステップ⑥ トラブルシューティング</h4>
+<p>エラーが出た場合は、以下の手順で対処する。ログの確認（Apps Scriptの実行ログ、AppSheetのモニター等）、エラーメッセージの内容をAIに相談してデバッグする、設定の見直しと再テスト。エラー対処の過程も記録しておく。</p>
+
+<hr>
+
+<h3>成果物</h3>
+
+<div style="background: #e8f4f8; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
+<strong>提出物</strong>
+<ol>
+<li><strong>ワークフロー設定テキスト</strong>：構築方法（A/B/C）、トリガー設定、処理内容、出力設定をテキストで説明。コードを書いた場合はコードも提出</li>
+<li><strong>テスト実行結果テキスト</strong>：テストデータの入力内容と出力結果をコピペで提出</li>
+<li><strong>エラー対処の記録（あれば）</strong>：エラー内容と対処法をテキストで記録</li>
+</ol>
+</div>
+
+<div style="background: #fff3cd; border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
+<strong>注意点</strong>
+<ul style="margin: 5px 0;">
+<li><strong>スクリーンショットでの提出はNGです。</strong>すべての提出物はテキスト（コピペ）で提出してください。採点の自動化・効率化のため、画像での提出は受け付けません。</li>
+<li>ファイル名は <strong>M05-S06_{氏名}</strong> の形式で提出してください</li>
+<li>提出物はすべてテキストで提出してください</li>
+<li>個人情報や機密情報が含まれないよう、テストデータにはダミーデータを使用してください</li>
+<li>エラーが出ても減点にはなりません。むしろ対処の記録があれば加点対象です</li>
+</ul>
+</div>
+
+</body>
+</html>

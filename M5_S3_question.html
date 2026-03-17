@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>問題文プレビュー：M5 S3実習課題</title>
+<style>
+body { font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; color: #525252; line-height: 1.6; }
+h1 { font-size: 24px; border-bottom: 2px solid #333; padding-bottom: 10px; }
+h3 { font-size: 18px; margin-top: 30px; }
+h4 { font-size: 16px; margin-top: 20px; }
+hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
+</style>
+</head>
+<body>
+
+<h1>検索・画像生成できる高機能Gemを作ろう</h1>
+
+<h3>目的</h3>
+<p>Google GeminiのGem機能を使って、Web検索と画像生成を組み合わせた高機能アシスタントを構築し、さらにNotebookLMの知識ベースと連携させて調査レポートを作成する体験をします。単一の機能だけでなく、複数のAI機能を統合することで、実務で即戦力となるアシスタントを作る力を身につけましょう。</p>
+
+<h3>課題</h3>
+<p>Google Gemini上でGemを作成し、「Web検索」と「画像生成」の機能を有効化してください。さらに、NotebookLMに読み込んだ資料を活用して、Web上の最新情報と社内知識を組み合わせた調査レポートを完成させてください。</p>
+
+<hr>
+
+<h3>手順</h3>
+
+<h4>ステップ① Gemの作成と機能設定</h4>
+<p>Google Geminiの左サイドバーから「Gem マネージャー」→「新しいGemを作成」を選択し、以下の設定を行います。</p>
+<ul>
+<li><strong>Gem名</strong>：用途がわかる名前をつける（例：「調査レポートアシスタント」「リサーチ＆ビジュアルBot」）</li>
+<li><strong>カスタム指示</strong>：Gemの役割・出力形式・調査の方針などを記述する</li>
+<li><strong>Web検索をON</strong>：最新のWeb情報を取得できるようにする</li>
+<li><strong>画像生成をON</strong>：調査レポートに図解やイメージ画像を追加できるようにする</li>
+</ul>
+
+<div style="background: #f5f5f5; border-left: 4px solid #666; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
+<strong>カスタム指示の例（調査レポートアシスタント）</strong><br><br>
+あなたは調査レポートを作成する専門アシスタントです。<br>
+ユーザーが調査テーマを指定したら、以下の手順でレポートを作成してください。<br><br>
+【手順】<br>
+1. Web検索で最新の情報を収集する<br>
+2. NotebookLMの資料から関連する知識を引用する<br>
+3. 以下のフォーマットでレポートを出力する<br><br>
+【出力フォーマット】<br>
+■ テーマ：（調査テーマ）<br>
+■ 要約：（3〜5行で概要をまとめる）<br>
+■ 最新動向：（Web検索結果をもとに記載）<br>
+■ 社内知識との関連：（NotebookLMの資料を引用）<br>
+■ 図解：（テーマに関するイメージ画像を生成）<br>
+■ 結論・提案：（調査結果をもとにした提案）<br><br>
+【ルール】<br>
+・情報源を明記すること<br>
+・事実と推測を区別すること<br>
+・図解は最低1つ含めること
+</div>
+
+<div style="background: #e8f4f8; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
+<strong>ヒント</strong><br>
+Gemの設定画面で「Web検索」と「画像生成」のトグルがそれぞれONになっていることを必ず確認してください。両方の機能が有効になっていないと、調査レポートに必要な情報収集や図解作成ができません。設定内容をテキストで記録しておきましょう。
+</div>
+
+<h4>ステップ② NotebookLMとの連携</h4>
+<p>S2で作成したNotebookLMのノートブック、または新たに資料（PDF、Webページ、Googleドキュメントなど）を読み込んだノートブックを用意します。Google Gemini上でNotebookLMをソースとして接続し、Gemがノートブックの内容を参照できるように設定します。</p>
+<ul>
+<li><strong>NotebookLMの準備</strong>：調査テーマに関連する資料が読み込まれたノートブックを用意する</li>
+<li><strong>Geminiとの連携設定</strong>：Gemini上でNotebookLMのノートブックをソースとして選択する</li>
+<li><strong>参照テスト</strong>：Gemに「NotebookLMの資料にはどんな情報がありますか？」と質問し、正しく参照できているか確認する</li>
+</ul>
+
+<div style="background: #f5f5f5; border-left: 4px solid #666; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
+<strong>連携の手順</strong><br>
+1. Geminiの画面で、Gemの設定またはチャット画面からNotebookLMのノートブックを接続します<br>
+2. 接続するノートブックを選択し、Gemがアクセスできる状態にします<br>
+3. Gemに質問して、ノートブックの内容を正しく参照できるか確認します<br>
+※ 連携方法はGeminiのバージョンにより異なる場合があります。最新のUIに従って操作してください。
+</div>
+
+<h4>ステップ③ 調査レポートの作成</h4>
+<p>Gemに調査テーマを指示し、Web検索で最新情報を取得しつつ、NotebookLMの資料からの引用も含めたレポートを生成させます。さらに、画像生成機能を使って図解やイメージ画像も追加させましょう。</p>
+<ul>
+<li><strong>調査テーマの指示</strong>：具体的な調査テーマをGemに伝える（例：「生成AIの業務活用の最新トレンドについて調査してください」）</li>
+<li><strong>Web検索結果の確認</strong>：Gemが取得した最新情報が正確かどうか確認する</li>
+<li><strong>NotebookLM引用の確認</strong>：レポート内にNotebookLMの資料からの引用が含まれているか確認する</li>
+<li><strong>画像生成の確認</strong>：テーマに関連する図解やイメージ画像が生成されているか確認する</li>
+</ul>
+
+<div style="background: #e8f4f8; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
+<strong>ヒント</strong><br>
+レポートの質を高めるコツは、Gemへの指示を具体的にすることです。「調査して」だけではなく、「最新のWeb情報を3つ以上引用し、NotebookLMの資料から関連する箇所を引用し、テーマを視覚的に表す画像を1つ生成してください」のように詳細に指示しましょう。
+</div>
+
+<h4>ステップ④ 共有設定の確認</h4>
+<p>作成したGemの共有範囲を確認します。企業でAIアシスタントを運用する際、共有設定の管理は情報セキュリティ上、非常に重要です。</p>
+<ul>
+<li><strong>共有範囲の確認</strong>：「自分のみ」「社内のみ」「リンクを知っている人のみ」など、共有設定が適切か確認する</li>
+<li><strong>機密情報の取り扱い</strong>：Gemに読み込ませた資料やNotebookLMの内容に機密情報が含まれていないか確認する</li>
+<li><strong>セキュリティポリシー</strong>：組織のセキュリティポリシーに沿った設定になっているか確認する</li>
+</ul>
+
+<div style="background: #fff3cd; border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
+<strong>重要：セキュリティに関する注意</strong><br>
+<ul style="margin: 5px 0;">
+<li>Gemを「リンクを知っている全員」に共有すると、意図しない第三者がアクセスする可能性があります</li>
+<li>NotebookLMに読み込んだ資料が外部に漏洩しないよう、共有設定を必ず確認してください</li>
+<li>テスト用の入力には機密情報やお客様の個人情報を使用しないでください</li>
+</ul>
+</div>
+
+<hr>
+
+<h3>成果物</h3>
+
+<div style="background: #e8f4f8; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
+<strong>提出物</strong>
+<ol>
+<li><strong>Gem設定テキスト</strong>：Gem名・カスタム指示の全文をテキストで提出（Web検索ON・画像生成ONの設定状況も明記）</li>
+<li><strong>調査レポートテキスト</strong>：Web検索結果・NotebookLM引用・図解の説明を含む調査レポートをコピペで提出</li>
+</ol>
+</div>
+
+<div style="background: #fff3cd; border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
+<strong>注意点</strong>
+<ul style="margin: 5px 0;">
+<li><strong>スクリーンショットでの提出はNGです。</strong>すべての提出物はテキスト（コピペ）で提出してください。採点の自動化・効率化のため、画像での提出は受け付けません。</li>
+<li>ファイル名は <strong>M05-S03_{氏名}</strong> の形式で提出してください</li>
+<li>共有設定が適切であることを説明文で示してください</li>
+<li>個人情報や機密情報が含まれないよう、テスト入力にはダミーデータを使用してください</li>
+</ul>
+</div>
+
+</body>
+</html>
