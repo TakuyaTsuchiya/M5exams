@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M5実習課題 一覧</title>
+<style>
+body { font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; color: #525252; line-height: 1.6; }
+h1 { font-size: 24px; border-bottom: 2px solid #333; padding-bottom: 10px; }
+h2 { font-size: 20px; margin-top: 30px; color: #333; }
+.section { background: #f9f9f9; border-radius: 8px; padding: 15px 20px; margin: 10px 0; }
+.section a { color: #3498db; text-decoration: none; margin-right: 20px; }
+.section a:hover { text-decoration: underline; }
+.links { margin-top: 8px; }
+</style>
+</head>
+<body>
+<div id="auth-wall" style="display:none; max-width:400px; margin:100px auto; text-align:center; font-family:sans-serif;">
+<h2>M5実習課題 レビューサイト</h2>
+<form id="auth-form">
+<input id="auth-pass" type="password" placeholder="パスワードを入力" style="padding:10px;font-size:16px;width:200px;border:1px solid #ccc;border-radius:4px;">
+<button type="submit" style="padding:10px 20px;font-size:16px;margin-left:8px;background:#3498db;color:#fff;border:none;border-radius:4px;cursor:pointer;">確認</button>
+<p id="auth-error" style="color:red;margin-top:10px;"></p>
+</form>
+</div>
+<div id="main-content" style="display:none;">
+
+<h1>M5実習課題 一覧</h1>
+<p>各セクションの問題文と解説を確認し、ページ下部のコメント欄からフィードバックをお願いします。</p>
+
+<h2>セクション別課題</h2>
+
+<div class="section">
+<strong>S1: カスタム指示付きの自分専用Botを作ろう</strong>
+<div class="links">
+<a href="M5_S1_question.html">問題文</a>
+<a href="M5_S1_explanation.html">解説</a>
+</div>
+</div>
+
+<div class="section">
+<strong>S2: NotebookLMで正確な回答を作ろう</strong>
+<div class="links">
+<a href="M5_S2_question.html">問題文</a>
+<a href="M5_S2_explanation.html">解説</a>
+</div>
+</div>
+
+<div class="section">
+<strong>S3: 検索・画像生成できる高機能Gemを作ろう</strong>
+<div class="links">
+<a href="M5_S3_question.html">問題文</a>
+<a href="M5_S3_explanation.html">解説</a>
+</div>
+</div>
+
+<div class="section">
+<strong>S4: アイデアを元に業務特化Botを3つ作ろう</strong>
+<div class="links">
+<a href="M5_S4_question.html">問題文</a>
+<a href="M5_S4_explanation.html">解説</a>
+</div>
+</div>
+
+<div class="section">
+<strong>S5: Mermaidで業務フロー設計図を作ろう</strong>
+<div class="links">
+<a href="M5_S5_question.html">問題文</a>
+<a href="M5_S5_explanation.html">解説</a>
+</div>
+</div>
+
+<div class="section">
+<strong>S6: GWSで設計図から動くシステムを作ろう</strong>
+<div class="links">
+<a href="M5_S6_question.html">問題文</a>
+<a href="M5_S6_explanation.html">解説</a>
+</div>
+</div>
+
+<h2>まとめ課題</h2>
+
+<div class="section">
+<strong>面倒なルーティンの自動化システムを作ろう</strong>
+<div class="links">
+<a href="M5_summary_question.html">問題文</a>
+<a href="M5_summary_explanation.html">解説</a>
+</div>
+</div>
+
+<script src="https://giscus.app/client.js"
+  data-repo="TakuyaTsuchiya/M5exams"
+  data-repo-id="R_kgDORpPiyQ"
+  data-category="General"
+  data-category-id="DIC_kwDORpPiyc4C4lf0"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="light"
+  data-lang="ja"
+  crossorigin="anonymous"
+  async>
+</script>
+
+</div>
+<script src="auth.js"></script>
+</body>
+</html>

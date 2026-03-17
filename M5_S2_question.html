@@ -17,6 +17,15 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 </style>
 </head>
 <body>
+<div id="auth-wall" style="display:none; max-width:400px; margin:100px auto; text-align:center; font-family:sans-serif;">
+<h2>M5実習課題 レビューサイト</h2>
+<form id="auth-form">
+<input id="auth-pass" type="password" placeholder="パスワードを入力" style="padding:10px;font-size:16px;width:200px;border:1px solid #ccc;border-radius:4px;">
+<button type="submit" style="padding:10px 20px;font-size:16px;margin-left:8px;background:#3498db;color:#fff;border:none;border-radius:4px;cursor:pointer;">確認</button>
+<p id="auth-error" style="color:red;margin-top:10px;"></p>
+</form>
+</div>
+<div id="main-content" style="display:none;">
 
 <h1>NotebookLMで正確な回答を作ろう</h1>
 
@@ -113,5 +122,26 @@ NotebookLMが生成した模擬テスト（Q&A形式）を3問以上コピペで
 </ol>
 </div>
 
+<hr>
+<p><a href="index.html" style="color: #3498db; text-decoration: none;">← 一覧に戻る</a></p>
+
+<script src="https://giscus.app/client.js"
+  data-repo="TakuyaTsuchiya/M5exams"
+  data-repo-id="R_kgDORpPiyQ"
+  data-category="General"
+  data-category-id="DIC_kwDORpPiyc4C4lf0"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="light"
+  data-lang="ja"
+  crossorigin="anonymous"
+  async>
+</script>
+
+</div>
+<script src="auth.js"></script>
 </body>
 </html>

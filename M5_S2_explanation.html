@@ -20,6 +20,15 @@ ul li, ol li { margin-bottom: 10px; }
 </style>
 </head>
 <body>
+<div id="auth-wall" style="display:none; max-width:400px; margin:100px auto; text-align:center; font-family:sans-serif;">
+<h2>M5実習課題 レビューサイト</h2>
+<form id="auth-form">
+<input id="auth-pass" type="password" placeholder="パスワードを入力" style="padding:10px;font-size:16px;width:200px;border:1px solid #ccc;border-radius:4px;">
+<button type="submit" style="padding:10px 20px;font-size:16px;margin-left:8px;background:#3498db;color:#fff;border:none;border-radius:4px;cursor:pointer;">確認</button>
+<p id="auth-error" style="color:red;margin-top:10px;"></p>
+</form>
+</div>
+<div id="main-content" style="display:none;">
 
 <h1>解説と回答例</h1>
 
@@ -183,5 +192,26 @@ AI溝口（モジュール5専用）に質問してみましょう。NotebookLM�
 <a href="https://chatgpt.com/g/g-6839cb0816988191b52c37b9f108e28c-aigou-kou-mosiyu-ru5" target="_blank">AI溝口 for モジュール5 を開く</a>
 </div>
 
+<hr>
+<p><a href="index.html" style="color: #3498db; text-decoration: none;">← 一覧に戻る</a></p>
+
+<script src="https://giscus.app/client.js"
+  data-repo="TakuyaTsuchiya/M5exams"
+  data-repo-id="R_kgDORpPiyQ"
+  data-category="General"
+  data-category-id="DIC_kwDORpPiyc4C4lf0"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="light"
+  data-lang="ja"
+  crossorigin="anonymous"
+  async>
+</script>
+
+</div>
+<script src="auth.js"></script>
 </body>
 </html>
