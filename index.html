@@ -105,7 +105,7 @@ function switchTab(i) {
   var all = bar.querySelectorAll('.tab');
   all.forEach(function(el) { el.classList.remove('active'); });
   all[i].classList.add('active');
-  frame.src = tabs[i].file;
+  frame.src = tabs[i].file + '?v=' + Date.now();
   // Scroll tab into view
   all[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
 }
