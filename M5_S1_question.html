@@ -14,13 +14,13 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 </head>
 <body>
 
-<h1>カスタム指示付きの自分専用Botを作ろう</h1>
+<h1>Instagram投稿文を自動生成するSNS投稿Botを作ろう</h1>
 
 <h3>目的</h3>
-<p>AIチャットを使うとき、毎回同じプロンプトをコピペしていませんか？ この課題では、ChatGPTの「GPTs」またはGoogle Geminiの「Gem」機能を使い、あらかじめカスタム指示を設定したオリジナルBotを作成します。一度設定すれば、誰が使っても決まったフォーマットで出力されるBotを作ることで、業務の属人化を防ぎ、チーム全体の生産性を高めるスキルを身につけましょう。</p>
+<p>AIチャットを使うとき、毎回同じプロンプトをコピペしていませんか？ この課題では、Google Geminiの「Gem」機能を使い、あらかじめカスタム指示を設定したオリジナルBotを作成します。一度設定すれば、誰が使っても決まったフォーマットで出力されるBotを作ることで、業務の属人化を防ぎ、チーム全体の生産性を高めるスキルを身につけましょう。</p>
 
 <h3>課題</h3>
-<p><strong>Instagram投稿文を自動生成するSNS投稿Bot</strong>を、GPTs（またはGem）で作成してください。作成したBotに対して、下記の3つのテスト入力を実行し、毎回同じフォーマットで出力されることを確認してください。</p>
+<p><strong>Instagram投稿文を自動生成するSNS投稿Bot</strong>を、Google GeminiのGem機能で作成してください。作成したBotに対して、下記の3つのテスト入力を実行し、毎回同じフォーマットで出力されることを確認してください。</p>
 
 <hr>
 
@@ -29,7 +29,7 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 <h4>ステップ① カスタム指示の設計</h4>
 <p>SNS投稿Botにどんな役割を持たせ、どんな形式で出力させるかを設計します。以下の3点を決めてください。</p>
 <ul>
-<li><strong>ペルソナ（役割）</strong>：Botにどんな専門性を持たせるか（例：「あなたはInstagram運用担当のアシスタントです」）</li>
+<li><strong>役割</strong>：Botにどんな専門性を持たせるか（例：「あなたはInstagram運用担当のアシスタントです」）</li>
 <li><strong>出力フォーマット</strong>：どんな項目をどんな形式で出力するか（例：キャッチコピー / 本文 / ハッシュタグ / 投稿タイミング案）</li>
 <li><strong>制約条件</strong>：守るべきルール（例：「体言止めで書く」「本文は150文字以内」「誇大表現禁止」）</li>
 </ul>
@@ -50,13 +50,12 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 ・フォーマット以外の前置きや補足は書かないこと
 </div>
 
-<h4>ステップ② GPTs/Gemの作成</h4>
-<p>設計したカスタム指示をもとに、実際にBotを作成します。</p>
+<h4>ステップ② Gemの作成</h4>
+<p>設計したカスタム指示をもとに、実際にGemを作成します。</p>
 <ul>
-<li><strong>ChatGPT GPTsの場合</strong>：ChatGPTの左サイドバーから「GPTを探す」→「+ 作成する」を選択し、「名前」「説明」「指示（Instructions）」を設定します。</li>
-<li><strong>Google Gemの場合</strong>：Geminiの左サイドバーから「Gem マネージャー」→「新しいGemを作成」を選択し、「名前」「カスタム指示」を設定します。</li>
+<li>Geminiの左サイドバーから「Gem マネージャー」→「新しいGemを作成」を選択し、「名前」「カスタム指示」を設定します。</li>
 </ul>
-<p>Bot名は用途がすぐわかる名前にしましょう（例：「議事録まとめくん」「メール下書きアシスタント」）。説明欄には、このBotが何をするものかを1〜2文で書いてください。</p>
+<p>Gem名は用途がすぐわかる名前にしましょう（例：「SNS投稿アシスタント」）。</p>
 
 <div style="background: #e8f4f8; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
 <strong>ヒント</strong><br>
@@ -76,24 +75,24 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 <p>作成したBotに対して、以下の<strong>3つのテスト入力</strong>を順番に実行し、毎回同じフォーマットで出力されるかを確認してください。</p>
 
 <div style="background: #f5f5f5; border-left: 4px solid #666; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
-<strong>テスト入力①（商品情報 ― 情報が揃っている）</strong><br>
+<strong>テスト入力①（商品情報）</strong><br>
 「夏の新作アイスティーが出ます。マンゴーとジャスミンのブレンド。税込450円。7月1日発売。冷たくてさっぱりした味わい。テイクアウト専用。」
 </div>
 
 <div style="background: #f5f5f5; border-left: 4px solid #666; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
-<strong>テスト入力②（イベント情報 ― 内容が異なる）</strong><br>
+<strong>テスト入力②（イベント情報）</strong><br>
 「来月、渋谷で無料ワークショップやります。AIを使ったデザイン入門。定員20名。講師は田中さん。初心者歓迎。」
 </div>
 
 <div style="background: #f5f5f5; border-left: 4px solid #666; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
-<strong>テスト入力③（情報が少ない）</strong><br>
+<strong>テスト入力③（情報不足）</strong><br>
 「新しいサービス始めます。詳細はまだ決まっていません。」
 </div>
 
 <ul>
-<li>テスト入力①：情報が揃った状態でフォーマット通りに出力されるか確認</li>
+<li>テスト入力①：フォーマット通りに出力されるか確認</li>
 <li>テスト入力②：内容が変わってもフォーマットが崩れないか確認</li>
-<li>テスト入力③：情報が少ないとき、Botがどう対応するか確認（「※要確認」等の処理ができるか）</li>
+<li>テスト入力③：情報が少ないとき、Botがどう対応するか確認</li>
 </ul>
 <p>フォーマットが崩れる場合は、カスタム指示を修正して再テストしてください。指示文に具体例を追加したり、制約条件を強めたりすると改善します。</p>
 
@@ -110,12 +109,37 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 
 <h3>成果物</h3>
 
-<div style="background: #e8f4f8; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
-<strong>提出物</strong>
-<ol>
-<li><strong>Bot設定テキスト</strong>：Bot名・説明・カスタム指示の全文をテキストで提出してください</li>
-<li><strong>テスト入出力テキスト</strong>：指定された3つのテスト入力と、それぞれの出力結果をコピペで提出してください（フォーマットが統一されていることが確認できるもの）</li>
-</ol>
+<p>以下のテンプレートに内容を入れて提出してください。</p>
+
+<div style="background: #f5f5f5; border: 1px solid #ccc; padding: 20px; margin: 15px 0; border-radius: 8px; white-space: pre-wrap; font-family: monospace; font-size: 14px; line-height: 1.8;">
+■ Gem名：（ここに記入）
+
+■ カスタム指示：
+（ここにカスタム指示の全文を貼り付け）
+
+---
+
+■ テスト入力①（商品情報）：
+「夏の新作アイスティーが出ます。マンゴーとジャスミンのブレンド。税込450円。7月1日発売。冷たくてさっぱりした味わい。テイクアウト専用。」
+
+■ 出力結果①：
+（ここに出力結果を貼り付け）
+
+---
+
+■ テスト入力②（イベント情報）：
+「来月、渋谷で無料ワークショップやります。AIを使ったデザイン入門。定員20名。講師は田中さん。初心者歓迎。」
+
+■ 出力結果②：
+（ここに出力結果を貼り付け）
+
+---
+
+■ テスト入力③（情報不足）：
+「新しいサービス始めます。詳細はまだ決まっていません。」
+
+■ 出力結果③：
+（ここに出力結果を貼り付け）
 </div>
 
 
