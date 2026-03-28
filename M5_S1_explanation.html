@@ -12,11 +12,7 @@ h4 { margin-top: 25px; color: #333; }
 hr { margin: 20px 0; border: none; border-top: 1px solid #ccc; }
 ul li, ol li { margin-bottom: 10px; }
 .purpose-box { background-color: #e8f4f8; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
-.example-box { background-color: #f0f7e6; border-left: 4px solid #27ae60; padding: 15px; margin: 15px 0; white-space: pre-wrap; }
-.check-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
-.check-table th, .check-table td { border: 1px solid #ccc; padding: 10px; text-align: left; }
-.check-table th { background-color: #f0f0f0; }
-.supplement-box { background-color: #fff9e6; border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; }
+.tip-box { background-color: #f0f7e6; border-left: 4px solid #27ae60; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
 </style>
 </head>
 <body>
@@ -27,60 +23,34 @@ ul li, ol li { margin-bottom: 10px; }
 <div class="purpose-box">
 <p>この課題のねらいは、<strong>「カスタム指示を設定してGemを構築すること」</strong>です。</p>
 <p>誰が・何を入力しても同じフォーマットで出力させるGemを作ることで、業務の生産性が大幅に向上します。</p>
-<p>採点では、受講生が提出したカスタム指示に「役割」「出力フォーマット」「制約条件」の3要素が具体的に書かれているかを評価してください。さらに、3回のテスト出力でフォーマットが実際に統一されているかを確認してください。</p>
 </div>
 
 <hr>
 
-<h3>採点基準（実践力チェック）</h3>
-<p>合計30点満点で評価します。</p>
-
-<table class="check-table">
-<tr>
-<th>観点</th>
-<th>OK（満点）</th>
-<th>惜しい（半分程度）</th>
-<th>NG（0点）</th>
-</tr>
-<tr>
-<td><strong>①役割が明記されている</strong><br>（6点）</td>
-<td>役割が具体的に設定されている（例：「Instagram運用担当のアシスタント」）。</td>
-<td>書いてあるが曖昧（例：「アシスタントです」のみで専門性がない）。</td>
-<td>役割の記載なし。</td>
-</tr>
-<tr>
-<td><strong>②出力フォーマットが具体的</strong><br>（6点）</td>
-<td>項目名・形式が明確に指定されている（例：キャッチコピー / 本文 / ハッシュタグ等）。</td>
-<td>項目はあるが形式が曖昧（例：「いい感じにまとめて」等）。</td>
-<td>フォーマット指定なし。</td>
-</tr>
-<tr>
-<td><strong>③制約条件が設定されている</strong><br>（6点）</td>
-<td>具体的なルールが複数ある（例：体言止め、文字数制限、禁止表現など）。</td>
-<td>制約が1つだけ、または曖昧（例：「丁寧に書いて」のみ）。</td>
-<td>制約条件の記載なし。</td>
-</tr>
-<tr>
-<td><strong>④3回の出力でフォーマット統一</strong><br>（12点）</td>
-<td>指定された3つのテスト入力すべてで同じ構造のフォーマットで出力されている。</td>
-<td>1回フォーマットが崩れた、またはテスト回数が不足している。</td>
-<td>出力がバラバラ、またはテスト未実施。</td>
-</tr>
-</table>
+<h3>カスタム指示の3要素</h3>
+<p>安定した出力を得るために、カスタム指示には以下の3要素を含めることが重要です。</p>
+<ul>
+<li><strong>役割</strong>：Gemに専門的な立場を与える（例：「Instagram運用担当のアシスタント」）。役割が具体的なほど、出力のトーンや内容が安定します。</li>
+<li><strong>出力フォーマット</strong>：項目名・形式を明確に指定する（例：キャッチコピー / 本文 / ハッシュタグ）。毎回同じ構造で出力されるようになります。</li>
+<li><strong>制約条件</strong>：具体的なルールを設定する（例：体言止め、文字数制限、禁止表現など）。出力のブレを防ぎます。</li>
+</ul>
 
 <hr>
 
-<h3>フィードバックのポイント</h3>
-<div class="supplement-box">
-<p><strong>高評価のケース：</strong><br>
-カスタム指示に「役割」「出力フォーマット」「制約条件」がすべて具体的に含まれており、指定された3つのテスト入力すべてで同じフォーマットで出力されている場合、満点に近い評価となります。出力例を指示文に含めている場合はさらに安定しやすく、設計力の高さを示しています。</p>
-
-<p><strong>改善が必要なケース：</strong><br>
-指示文が「丁寧に答えてください」「わかりやすく説明してください」のような抽象的な内容のみの場合、フォーマットの統一が難しくなります。具体的な出力形式（項目名、順序、文字数制限など）を指示文に追記するようフィードバックしてください。</p>
-
-<p><strong>再提出を求めるケース：</strong><br>
-Bot設定テキストが未提出、またはテスト実行が行われていない場合は再提出を依頼してください。「Bot名・説明・カスタム指示の全文をテキストで提出し、指定された3つのテスト入力で実行してください」と具体的に指示します。</p>
+<h3>コツ・ポイント</h3>
+<div class="tip-box">
+<p><strong>出力例を指示文に含める</strong>と、フォーマットの安定性がさらに高まります。Gemに「こういう形式で返してね」と見本を見せることで、指示の解釈ブレが減ります。</p>
 </div>
+
+<hr>
+
+<h3>実務での活用イメージ</h3>
+<p>カスタム指示を設定したGemは、以下のような業務で活用できます。</p>
+<ul>
+<li>SNS投稿文の定型生成（毎回同じフォーマットで投稿案を作成）</li>
+<li>議事録の要約（決まったテンプレートで会議メモを整理）</li>
+<li>問い合わせ対応のドラフト作成（トーンやフォーマットを統一）</li>
+</ul>
 
 <hr>
 

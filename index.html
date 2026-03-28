@@ -45,6 +45,7 @@ html, body { height: 100%; font-family: "Hiragino Sans", "Hiragino Kaku Gothic P
 }
 .tab.question { border-left: 3px solid #3498db; }
 .tab.explanation { border-left: 3px solid #e67e22; }
+.tab.rubric { border-left: 3px solid #e74c3c; }
 
 .content-frame {
   position: fixed;
@@ -76,19 +77,25 @@ html, body { height: 100%; font-family: "Hiragino Sans", "Hiragino Kaku Gothic P
 var tabs = [
   { label: 'S1 課題', file: 'M5_S1_question.html', type: 'question' },
   { label: 'S1 解説', file: 'M5_S1_explanation.html', type: 'explanation' },
+  { label: 'S1 ルーブリック', file: 'M5_S1_rubric.html', type: 'rubric' },
   { label: 'S2 課題', file: 'M5_S2_question.html', type: 'question' },
   { label: 'S2 解説', file: 'M5_S2_explanation.html', type: 'explanation' },
+  { label: 'S2 ルーブリック', file: 'M5_S2_rubric.html', type: 'rubric' },
   { label: 'S3 課題', file: 'M5_S3_question.html', type: 'question' },
   { label: 'S3 解説', file: 'M5_S3_explanation.html', type: 'explanation' },
-  { label: 'S3 ルーブリック', file: 'M5_S3_rubric.html', type: 'explanation' },
+  { label: 'S3 ルーブリック', file: 'M5_S3_rubric.html', type: 'rubric' },
   { label: 'S4 課題', file: 'M5_S4_question.html', type: 'question' },
   { label: 'S4 解説', file: 'M5_S4_explanation.html', type: 'explanation' },
+  { label: 'S4 ルーブリック', file: 'M5_S4_rubric.html', type: 'rubric' },
   { label: 'S5 課題', file: 'M5_S5_question.html', type: 'question' },
   { label: 'S5 解説', file: 'M5_S5_explanation.html', type: 'explanation' },
+  { label: 'S5 ルーブリック', file: 'M5_S5_rubric.html', type: 'rubric' },
   { label: 'S6 課題', file: 'M5_S6_question.html', type: 'question' },
   { label: 'S6 解説', file: 'M5_S6_explanation.html', type: 'explanation' },
+  { label: 'S6 ルーブリック', file: 'M5_S6_rubric.html', type: 'rubric' },
   { label: 'まとめ 課題', file: 'M5_summary_question.html', type: 'question' },
-  { label: 'まとめ 解説', file: 'M5_summary_explanation.html', type: 'explanation' }
+  { label: 'まとめ 解説', file: 'M5_summary_explanation.html', type: 'explanation' },
+  { label: 'まとめ ルーブリック', file: 'M5_summary_rubric.html', type: 'rubric' }
 ];
 
 var bar = document.getElementById('tab-bar');

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ルーブリック：M5 S5実習課題</title>
+<style>
+body { font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.8; }
+h1 { font-size: 1.5em; border-bottom: 2px solid #333; padding-bottom: 10px; }
+h3 { margin-top: 30px; }
+hr { margin: 20px 0; border: none; border-top: 1px solid #ccc; }
+.check-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+.check-table th, .check-table td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+.check-table th { background-color: #f0f0f0; }
+.supplement-box { background-color: #fff9e6; border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; }
+</style>
+</head>
+<body>
+
+<h1>ルーブリック（採点基準）</h1>
+
+<h3>採点基準</h3>
+<p>合計30点満点で評価します。</p>
+
+<table class="check-table">
+<tr>
+<th>観点</th>
+<th>OK（満点）</th>
+<th>惜しい（半分程度）</th>
+<th>NG（0点）</th>
+</tr>
+<tr>
+<td><strong>①フローチャートの完成度</strong><br>（12点）</td>
+<td>Mermaid記法で正しく記述され、開始→処理→分岐→終了の流れが明確。Mermaid Live Editorで正しく描画される。ノードの命名がわかりやすく、業務の流れが第三者にも理解できる。</td>
+<td>フローチャートはあるが分岐や条件が不足している。一部のノードが曖昧、または流れに抜けがある。描画はできるが改善の余地がある。</td>
+<td>未提出。またはMermaid記法として成立していない。</td>
+</tr>
+<tr>
+<td><strong>②入出力定義の明確さ</strong><br>（12点）</td>
+<td>各ステップの入力と出力が具体的に定義されている。データの形式や内容が明確で、実装に移行できるレベルの詳細さがある。</td>
+<td>入出力の記載はあるが曖昧。「データ」「情報」など抽象的な表現が多く、具体的に何を指すかわからない。</td>
+<td>未提出。または入出力定義がまったくない。</td>
+</tr>
+<tr>
+<td><strong>③業務選定と実現可能性</strong><br>（6点）</td>
+<td>実際の業務に基づいた現実的な自動化対象が選ばれている。Google Workspaceのツール（Gmail、スプレッドシート、フォーム等）で実現可能な範囲の業務である。</td>
+<td>対象は選ばれているが自動化の実現性が低い。業務の範囲が広すぎる、または技術的に困難な内容を含んでいる。</td>
+<td>未提出。または業務選定が行われていない。</td>
+</tr>
+</table>
+
+<hr>
+
+<h3>フィードバックのポイント</h3>
+<div class="supplement-box">
+<p><strong>高評価のケース：</strong><br>
+フローチャートに開始・終了ノード、処理ノード、分岐（判断）ノードが適切に配置されており、Mermaid Live Editorで正しく描画される。入出力定義では各ステップに対して「メールの件名（文字列）」「判定結果（TRUE/FALSE）」のように具体的なデータ形式まで記載されている場合、満点に近い評価となります。特に、Google Workspaceのツール（Gmail、Googleスプレッドシート、Googleフォーム等）で実際に自動化できそうな業務が選ばれていると、実現可能性の観点でも高評価です。</p>
+
+<p><strong>改善が必要なケース：</strong><br>
+フローチャートが直線的で分岐がまったくない場合は、「この業務で判断が必要なポイントはありませんか？例外的なケースはどう処理しますか？」と問いかけてください。入出力定義が「データを入力→結果を出力」のような抽象的な記述の場合は、「具体的にどんなデータですか？ファイル形式は？誰が入力しますか？」と掘り下げるようフィードバックしてください。</p>
+
+<p><strong>再提出を求めるケース：</strong><br>
+Mermaidコードが未提出の場合、またはフローチャートと入出力定義のどちらかが欠けている場合は再提出を依頼してください。「Mermaidコードをテキストで提出し、各ステップの入出力を表形式で整理してください」と具体的に指示します。</p>
+</div>
+
+
+</body>
+</html>
