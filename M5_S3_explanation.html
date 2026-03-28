@@ -8,67 +8,40 @@
 body { font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.8; }
 h1 { font-size: 1.5em; border-bottom: 2px solid #333; padding-bottom: 10px; }
 h3 { margin-top: 30px; }
-h4 { margin-top: 25px; color: #333; }
 hr { margin: 20px 0; border: none; border-top: 1px solid #ccc; }
-ul li, ol li { margin-bottom: 10px; }
+ul li { margin-bottom: 10px; }
 .purpose-box { background-color: #e8f4f8; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; }
-.example-box { background-color: #f0f7e6; border-left: 4px solid #27ae60; padding: 15px; margin: 15px 0; white-space: pre-wrap; }
-.check-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
-.check-table th, .check-table td { border: 1px solid #ccc; padding: 10px; text-align: left; }
-.check-table th { background-color: #f0f0f0; }
-.supplement-box { background-color: #fff9e6; border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; }
 </style>
 </head>
 <body>
 
-<h1>解説と回答例</h1>
+<h1>解説</h1>
 
 <h3>この課題のねらい</h3>
 <div class="purpose-box">
 <p>この課題のねらいは、<strong>「Web検索機能を活用したGPTを構築し、自分で調査プロンプトを書いて最新情報を引き出すこと」</strong>です。</p>
-<p>セクション1では「カスタム指示を書いてフォーマットを統一する」ことを学びました。セクション3ではそこにWeb検索という機能を追加したGPTを構築し、さらに「何をどう調べるか」を自分でプロンプトとして設計する体験をします。</p>
-<p>採点では、カスタム指示と調査プロンプトの具体性を評価してください。AIの出力内容そのものは評価対象外です。</p>
+<p>セクション1では「カスタム指示を書いてフォーマットを統一する」ことを学びました。セクション3ではそこにWeb検索という機能を追加したGPTを構築し、さらに「何をどう調べるか」を自分でプロンプトとして設計する体験をしました。</p>
 </div>
 
 <hr>
 
-<h3>採点基準（実践力チェック）</h3>
-<p>合計30点満点で評価します。評価対象はカスタム指示と調査プロンプト（人間が書いたパート）です。AIの出力結果そのものは評価しません。</p>
+<h3>Web検索付きGPTのポイント</h3>
+<p>通常のGPTは学習データの範囲でしか回答できません。Web検索をONにすると、最新の情報をリアルタイムで取得して回答に反映できるようになります。</p>
+<p>ただし、検索結果をそのまま出力すると情報が整理されません。カスタム指示で「どんなフォーマットで」「どんなルールで」整理するかを設計することで、毎回安定したレポートが得られるようになります。</p>
 
-<table class="check-table">
-<tr>
-<th>観点</th>
-<th>OK（満点）</th>
-<th>惜しい（半分程度）</th>
-<th>NG（0点）</th>
-</tr>
-<tr>
-<td><strong>①カスタム指示の具体性</strong><br>（15点）</td>
-<td>役割・出力フォーマット・ルールの3要素がすべて具体的に設定されている。Web検索結果の整理方法（情報源の明記など）がルールに含まれている。</td>
-<td>3要素のうち1〜2つが曖昧。またはWeb検索に関するルールがない。</td>
-<td>カスタム指示の記載なし。</td>
-</tr>
-<tr>
-<td><strong>②調査プロンプトの具体性</strong><br>（15点）</td>
-<td>職種が明確で、知りたい項目が具体的に複数列挙されている（例：注目スキル、年収相場、求人倍率など）。</td>
-<td>職種は書いてあるが、知りたい項目が曖昧または1つだけ。</td>
-<td>プロンプトの記載なし、または未実施。</td>
-</tr>
-</table>
+<h3>調査プロンプトのコツ</h3>
+<ul>
+<li><strong>職種を具体的に指定する</strong> ─ 「エンジニア」より「ITエンジニア」「バックエンドエンジニア」の方が精度の高い情報が返ってくる</li>
+<li><strong>知りたい項目を列挙する</strong> ─ 「調べてください」だけでは何が返ってくるかわからない。「①年収相場 ②求人倍率 ③注目スキル」のように番号付きで列挙すると、漏れなく回答が得られる</li>
+<li><strong>誰に向けたレポートかを意識する</strong> ─ 採用責任者への報告なら、数値データや情報源が重要。同僚への共有なら要点だけでよい。読み手を意識すると、プロンプトに入れるべき項目が変わる</li>
+</ul>
 
-<hr>
-
-<h3>フィードバックのポイント</h3>
-<div class="supplement-box">
-<p><strong>高評価のケース：</strong><br>
-カスタム指示にWeb検索ならではのルール（「情報源のURLを明記する」「データの取得日を記載する」など）が含まれており、調査プロンプトでも職種と知りたい項目が具体的に書かれている場合、高評価です。</p>
-
-<p><strong>改善が必要なケース：</strong><br>
-カスタム指示にWeb検索に関するルールがない場合は「Web検索で得た情報をどう整理・表示するかのルールを追加してください」とフィードバックします。調査プロンプトが「〇〇について調べてください」のように漠然としている場合は「具体的に何を知りたいか項目を列挙してください」と促してください。</p>
-
-<p><strong>再提出を求めるケース：</strong><br>
-カスタム指示が未提出、または調査プロンプト・出力結果が未記入の場合は再提出を依頼してください。</p>
-</div>
+<h3>実務での活用イメージ</h3>
+<ul>
+<li><strong>採用市場の定期レポート</strong> ─ 今回の課題のように、毎月の市場動向を自動収集してレポート化する</li>
+<li><strong>競合調査</strong> ─ 競合企業の採用状況、給与水準、福利厚生を定期的にモニタリングする</li>
+<li><strong>業界トレンド把握</strong> ─ 新しい技術、資格、働き方のトレンドを追跡し、採用戦略に反映する</li>
+</ul>
 
 <hr>
 
