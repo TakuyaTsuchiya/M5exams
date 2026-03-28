@@ -35,14 +35,23 @@ html, body { height: 100%; font-family: "Hiragino Sans", "Hiragino Kaku Gothic P
   transition: background 0.15s, color 0.15s;
   user-select: none;
 }
-.tab:hover { background: #e0e0e0; }
+.tab:hover { filter: brightness(0.93); }
 .tab.active {
-  background: #fff;
   color: #333;
   font-weight: bold;
-  border-bottom: 2px solid #3498db;
+  border-bottom: 2px solid #333;
   margin-bottom: -2px;
+  filter: brightness(0.88);
 }
+/* セクションごとの背景色 */
+.tab.s1 { background: #dbeafe; }
+.tab.s2 { background: #d1fae5; }
+.tab.s3 { background: #fef3c7; }
+.tab.s4 { background: #fce7f3; }
+.tab.s5 { background: #e0e7ff; }
+.tab.s6 { background: #ede9fe; }
+.tab.summary { background: #f3f4f6; }
+/* 種別の左ボーダー */
 .tab.question { border-left: 3px solid #3498db; }
 .tab.explanation { border-left: 3px solid #e67e22; }
 .tab.rubric { border-left: 3px solid #e74c3c; }
@@ -75,27 +84,27 @@ html, body { height: 100%; font-family: "Hiragino Sans", "Hiragino Kaku Gothic P
 <script src="auth.js"></script>
 <script>
 var tabs = [
-  { label: 'S1 課題', file: 'M5_S1_question.html', type: 'question' },
-  { label: 'S1 解説', file: 'M5_S1_explanation.html', type: 'explanation' },
-  { label: 'S1 ルーブリック', file: 'M5_S1_rubric.html', type: 'rubric' },
-  { label: 'S2 課題', file: 'M5_S2_question.html', type: 'question' },
-  { label: 'S2 解説', file: 'M5_S2_explanation.html', type: 'explanation' },
-  { label: 'S2 ルーブリック', file: 'M5_S2_rubric.html', type: 'rubric' },
-  { label: 'S3 課題', file: 'M5_S3_question.html', type: 'question' },
-  { label: 'S3 解説', file: 'M5_S3_explanation.html', type: 'explanation' },
-  { label: 'S3 ルーブリック', file: 'M5_S3_rubric.html', type: 'rubric' },
-  { label: 'S4 課題', file: 'M5_S4_question.html', type: 'question' },
-  { label: 'S4 解説', file: 'M5_S4_explanation.html', type: 'explanation' },
-  { label: 'S4 ルーブリック', file: 'M5_S4_rubric.html', type: 'rubric' },
-  { label: 'S5 課題', file: 'M5_S5_question.html', type: 'question' },
-  { label: 'S5 解説', file: 'M5_S5_explanation.html', type: 'explanation' },
-  { label: 'S5 ルーブリック', file: 'M5_S5_rubric.html', type: 'rubric' },
-  { label: 'S6 課題', file: 'M5_S6_question.html', type: 'question' },
-  { label: 'S6 解説', file: 'M5_S6_explanation.html', type: 'explanation' },
-  { label: 'S6 ルーブリック', file: 'M5_S6_rubric.html', type: 'rubric' },
-  { label: 'まとめ 課題', file: 'M5_summary_question.html', type: 'question' },
-  { label: 'まとめ 解説', file: 'M5_summary_explanation.html', type: 'explanation' },
-  { label: 'まとめ ルーブリック', file: 'M5_summary_rubric.html', type: 'rubric' }
+  { label: 'S1 課題', file: 'M5_S1_question.html', type: 'question', section: 's1' },
+  { label: 'S1 解説', file: 'M5_S1_explanation.html', type: 'explanation', section: 's1' },
+  { label: 'S1 ルーブリック', file: 'M5_S1_rubric.html', type: 'rubric', section: 's1' },
+  { label: 'S2 課題', file: 'M5_S2_question.html', type: 'question', section: 's2' },
+  { label: 'S2 解説', file: 'M5_S2_explanation.html', type: 'explanation', section: 's2' },
+  { label: 'S2 ルーブリック', file: 'M5_S2_rubric.html', type: 'rubric', section: 's2' },
+  { label: 'S3 課題', file: 'M5_S3_question.html', type: 'question', section: 's3' },
+  { label: 'S3 解説', file: 'M5_S3_explanation.html', type: 'explanation', section: 's3' },
+  { label: 'S3 ルーブリック', file: 'M5_S3_rubric.html', type: 'rubric', section: 's3' },
+  { label: 'S4 課題', file: 'M5_S4_question.html', type: 'question', section: 's4' },
+  { label: 'S4 解説', file: 'M5_S4_explanation.html', type: 'explanation', section: 's4' },
+  { label: 'S4 ルーブリック', file: 'M5_S4_rubric.html', type: 'rubric', section: 's4' },
+  { label: 'S5 課題', file: 'M5_S5_question.html', type: 'question', section: 's5' },
+  { label: 'S5 解説', file: 'M5_S5_explanation.html', type: 'explanation', section: 's5' },
+  { label: 'S5 ルーブリック', file: 'M5_S5_rubric.html', type: 'rubric', section: 's5' },
+  { label: 'S6 課題', file: 'M5_S6_question.html', type: 'question', section: 's6' },
+  { label: 'S6 解説', file: 'M5_S6_explanation.html', type: 'explanation', section: 's6' },
+  { label: 'S6 ルーブリック', file: 'M5_S6_rubric.html', type: 'rubric', section: 's6' },
+  { label: 'まとめ 課題', file: 'M5_summary_question.html', type: 'question', section: 'summary' },
+  { label: 'まとめ 解説', file: 'M5_summary_explanation.html', type: 'explanation', section: 'summary' },
+  { label: 'まとめ ルーブリック', file: 'M5_summary_rubric.html', type: 'rubric', section: 'summary' }
 ];
 
 var bar = document.getElementById('tab-bar');
@@ -103,7 +112,7 @@ var frame = document.getElementById('content-frame');
 
 tabs.forEach(function(t, i) {
   var el = document.createElement('div');
-  el.className = 'tab ' + t.type;
+  el.className = 'tab ' + t.type + ' ' + t.section;
   el.textContent = t.label;
   el.addEventListener('click', function() { switchTab(i); });
   bar.appendChild(el);
