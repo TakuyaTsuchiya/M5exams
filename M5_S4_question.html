@@ -21,16 +21,15 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 <p>セクション4では、実際にうまくいった事例の「骨組み（構造）」を読み解き、自分の業務に合わせてカスタマイズすることで、短時間で実用的なGPTを作ります。最初からすべてを自分で考えるのではなく、成功事例の考え方をヒントにするのがポイントです。</p>
 
 <h3>課題</h3>
-<p>WEIN/BACKSTAGE Groupでは2025年に全社員参加の<strong>「AI Booster 100」</strong>プロジェクトが行われ、業務を効率化するGPTが多数作られました。そのなかの1つが<strong>「営業会議のファシリテーター兼、アジェンダ設計の専門家」</strong>です。</p>
-<p>このGPTは、営業会議の目的や参加者を入力するだけで、時間配分付きの進行表を自動生成してくれます。入力情報が足りなくてもAIが質問で補い、出力が表形式に固定されているためそのまま社内共有に使えます。単に進行表を作るだけでなく、会議が成果につながるような設計思想が組み込まれている点もポイントです。</p>
-<p>あなたは人材の転職スカウトサービスを運営する<strong>株式会社ミゾリーチ</strong>の人事部のスタッフです。このGPTの骨組みを分析したうえで、<strong>採用面接のアジェンダ（面接で話すこと・時間配分）を自動生成するGPT</strong>にカスタマイズしてください。</p>
+<p>あなたは人材の転職スカウトサービスを運営する<strong>株式会社ミゾリーチ</strong>の人事部のスタッフです。既存のGPTの骨組みを分析したうえで、<strong>採用面接のアジェンダ（面接で話すこと・時間配分）を自動生成するGPT</strong>にカスタマイズしてください。</p>
 <p>対象は<strong>一次面接</strong>とします。職種・業界は自分の好きなものを自由に選んでください。その職種の一次面接に合った入力・出力・ルールを設計してください。</p>
+<p>ベースとなるお手本は以下のGPTです。WEIN/BACKSTAGE Groupでは2025年に全社員参加の<strong>「AI Booster 100」</strong>プロジェクトが行われ、業務を効率化するGPTが多数作られました。そのなかの1つが<strong>「営業会議のファシリテーター兼、アジェンダ設計の専門家」</strong>です。</p>
+<p>このGPTは、営業会議の目的や参加者を入力するだけで、時間配分付きの進行表を自動生成してくれます。入力情報が足りなくてもAIが質問で補い、出力が表形式に固定されているためそのまま社内共有に使えます。単に進行表を作るだけでなく、会議が成果につながるような設計思想が組み込まれている点もポイントです。</p>
 
 <h3>成果物</h3>
 <ul>
 <li><strong>採用面接アジェンダGPT</strong>
   <ul>
-  <li>骨組み分析（目的・入力・出力形式・指示の要点）</li>
   <li>GPT名・指示の全文</li>
   <li>テスト入出力</li>
   </ul>
@@ -41,8 +40,8 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 
 <h3>手順</h3>
 
-<h4>ステップ① 営業会議のファシリテーター兼、アジェンダ設計の専門家の骨組みを分析する</h4>
-<p>以下のリンクからGPTを開き、実際に使ってみてください。</p>
+<h4>ステップ① お手本GPTを使ってみる</h4>
+<p>以下のリンクからGPTを開き、実際に使ってみてください。設定内容も確認し、どんな構造で作られているかを把握してください。</p>
 <p><a href="https://chatgpt.com/g/g-69b4321e7b188191adaddc329c6da218-ying-ye-hui-yi-nohuasiritetajian-asientashe-ji-nozhuan-men-jia" target="_blank"><strong>営業会議のファシリテーター兼、アジェンダ設計の専門家（GPT）を開く</strong></a></p>
 
 <div style="background: #f5f5f5; border-left: 4px solid #666; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
@@ -64,16 +63,8 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 　最後に必ず「次回までのアクション確認」を入れること
 </div>
 
-<p>そのうえで以下の4つの観点を箇条書きで整理してください。自分の言葉で構造を書き出すのがポイントです。</p>
-<ul>
-<li><strong>目的</strong> ─ このGPTは何をするためのものか</li>
-<li><strong>入力</strong> ─ ユーザーは何を入力するか</li>
-<li><strong>出力形式</strong> ─ どんな形式・構成で結果が返ってくるか</li>
-<li><strong>指示の要点</strong> ─ どんなルールや工夫が組み込まれているか</li>
-</ul>
-
 <h4>ステップ② 採用面接のアジェンダGPTにカスタマイズする</h4>
-<p>ステップ①で抽出した骨組みをベースに、ChatGPTのGPTs機能で採用面接用のGPTを作成してください。入力・出力フォーマット・ルールを面接に合わせて具体的に変更してください。</p>
+<p>ステップ①で確認した構造をベースに、採用面接用のGPTを作成してください。入力・出力フォーマット・ルールを面接に合わせて具体的に変更してください。</p>
 
 <div style="background: #e8f4f8; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
 <strong>カスタマイズのヒント：営業会議と面接では何が変わる？</strong><br><br>
@@ -86,8 +77,12 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 <p>作成したGPTに実際の業務を想定した入力を与え、期待通りの出力が得られるか確認してください。テスト入力にはダミーデータを使い、個人情報や機密情報は含めないでください。</p>
 
 <div style="background: #f5f5f5; border-left: 4px solid #666; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
-<strong>テスト入力の例</strong><br>
-「バックエンドエンジニアの一次面接のアジェンダを作ってください。候補者：Webアプリ開発経験5年、現職はSaaS企業。面接官：開発チームリーダー＋人事1名。時間：45分。特に確認したい点：Go言語の実務経験、チーム開発の進め方。」
+<strong>テスト入力の例</strong><br><br>
+バックエンドエンジニアの一次面接のアジェンダを作ってください。<br>
+候補者の経歴：Webアプリ開発経験5年、現職はSaaS企業<br>
+担当する面接官：開発チームリーダー＋人事1名<br>
+時間：45分<br>
+特に確認したい点：Go言語の実務経験、チーム開発の進め方
 </div>
 
 <hr>
@@ -97,14 +92,6 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 <p>以下のテンプレートに内容を入れて提出してください。</p>
 
 <div style="background: #f5f5f5; border: 1px solid #ccc; padding: 20px; margin: 15px 0; border-radius: 8px; white-space: pre-wrap; font-family: monospace; font-size: 14px; line-height: 1.8;">
-■ 骨組み分析（営業会議のファシリテーター兼、アジェンダ設計の専門家）：
-・目的：
-・入力：
-・出力形式：
-・指示の要点：
-
----
-
 ■ GPT名：（ここに記入）
 
 ■ 指示：
