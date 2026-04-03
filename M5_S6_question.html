@@ -14,48 +14,45 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 </head>
 <body>
 
-<h1>実習課題：設計図をGoogle Workspace Studioで動かそう</h1>
+<h1>実習課題：Google Workspace Studioでニュース要約フローを動かそう</h1>
 
 <h3>目的</h3>
-<p>セクション5ではフローチャートと入出力定義で業務の設計図を作りました。セクション6では、その設計図をもとにGoogle Workspace Studioで実際に動くワークフローを作ります。</p>
-<p>この課題の目的は、<strong>Workspace Studioの「Geminiにタスクを説明」機能を使い、セクション5で設計したワークフローを自動生成してテスト実行すること</strong>です。やりたいことを具体的に説明するだけで、Geminiがワークフローを組み立ててくれます。</p>
+<p>セクション5まではAIへの指示の書き方を学んできました。セクション6では、Google Workspace Studioを使って<strong>AIが自動で動く仕組み</strong>を体験します。</p>
+<p>この課題の目的は、<strong>Workspace Studioのテンプレートを自分の環境で動かし、Geminiへのプロンプトを自分の業務や興味に合わせてカスタマイズすること</strong>です。</p>
 
 <h3>課題</h3>
-<p>セクション5で設計した「応募受付→自動返信フロー」をもとに、Workspace Studioでワークフローを作成してください。「Geminiにタスクを説明」欄に、フローの処理内容と実行タイミングを具体的に入力し、生成されたワークフローをテスト実行します。</p>
+<p>Workspace Studioに用意されている「ニュース要約」テンプレートを自分の環境にコピーしてください。このテンプレートは、毎日Geminiがニュースの見出しを要約してGoogle Chatに通知してくれるワークフローです。</p>
+<p>テンプレートの中にあるGeminiへのプロンプトを、<strong>あなたの業務や業界に関するニュースを届けてくれるように書き換えて</strong>ください。書き換えたらテスト実行して、出力結果を確認します。</p>
 
 <h3>成果物</h3>
 <ul>
-<li><strong>「Geminiにタスクを説明」に入力したプロンプト</strong> ── Workspace Studioに入力した説明文の全文</li>
-<li><strong>テスト実行の結果</strong> ── テスト実行で得られた出力（メール下書きの内容、スプレッドシートへの記録など）</li>
+<li><strong>カスタマイズしたGeminiプロンプト</strong> ── テンプレートのプロンプトをどう書き換えたか、全文</li>
+<li><strong>テスト実行の出力結果</strong> ── Geminiが生成したニュース要約のテキスト</li>
 </ul>
 
 <hr>
 
 <h3>手順</h3>
 
-<h4>ステップ① Workspace Studioを開く</h4>
-<p><a href="https://studio.workspace.google.com" target="_blank">https://studio.workspace.google.com</a> にアクセスしてください。</p>
+<h4>ステップ① テンプレートをコピーする</h4>
+<p><a href="https://studio.workspace.google.com" target="_blank">https://studio.workspace.google.com</a> にアクセスしてください。「Everyday essentials」カテゴリにある「Get news headlines summarized daily」テンプレートを選び、自分の環境にコピーしてください。</p>
 
-<h4>ステップ② 「Geminiにタスクを説明」欄にプロンプトを入力する</h4>
-<p>画面中央の「Describe a task for Gemini」ボックスに、セクション5で設計したフローの内容を具体的に入力してください。何をトリガーにして、どんな処理をして、どこに出力するかを明確に書くのがポイントです。</p>
+<h4>ステップ② Geminiプロンプトをカスタマイズする</h4>
+<p>テンプレートの「Step 2: Ask Gemini」を開くと、ニュースを要約するためのプロンプトが入っています。このプロンプトを、あなたの業務や業界に合わせて書き換えてください。</p>
 
 <div style="background: #f5f5f5; border-left: 4px solid #666; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
-<strong>プロンプトの書き方のコツ</strong><br><br>
-<strong>具体的に書く（良い例）：</strong><br>
-「Googleフォームから応募が届いたら、応募職種がエンジニア職なら技術課題の案内メールを、ビジネス職なら面接日程調整の案内メールを自動で下書き作成して」<br><br>
-<strong>曖昧に書く（悪い例）：</strong><br>
-「応募を処理して」<br><br>
-セクション5で作った入出力定義を参考にすると、具体的な説明が書きやすくなります。
+<strong>カスタマイズの例</strong><br><br>
+<strong>人事の場合：</strong>採用市場・HRテック・リモートワーク動向に絞る<br>
+<strong>営業の場合：</strong>担当業界の市場動向・競合ニュースに絞る<br>
+<strong>エンジニアの場合：</strong>AI・クラウド・セキュリティの技術ニュースに絞る<br><br>
+自分が毎朝チェックしたい情報を具体的に指定するのがポイントです。
 </div>
 
-<h4>ステップ③ 生成されたフローを確認・編集する</h4>
-<p>「作成」をクリックすると、Geminiがフローのステップを生成します。各ステップが正しいか確認してください。必要に応じてステップの編集・並べ替え・追加ができます。</p>
+<h4>ステップ③ テスト実行</h4>
+<p>画面下部の「テスト実行」→「開始」をクリックしてください。「実行完了」と表示されたら、Geminiが生成したニュース要約の内容を確認してください。</p>
 
-<h4>ステップ④ テスト実行</h4>
-<p>「テスト実行」→「開始」をクリックして、ワークフローが正しく動くか確認してください。「実行完了」と表示されれば成功です。出力結果（メール下書きの内容やスプレッドシートの変化など）を確認して記録してください。</p>
-
-<h4>ステップ⑤ うまくいかない場合</h4>
-<p>エラーが出た場合は、エラーメッセージをChatGPTかGeminiに貼り付けて原因と対処法を聞いてください。修正したら再度テスト実行します。</p>
+<h4>ステップ④ うまくいかない場合</h4>
+<p>エラーが出た場合は、エラーメッセージをChatGPTかGeminiに貼り付けて原因と対処法を聞いてください。</p>
 
 <hr>
 
@@ -64,11 +61,11 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 <p>以下のテンプレートに内容を入れて提出してください。</p>
 
 <div style="background: #f5f5f5; border: 1px solid #ccc; padding: 20px; margin: 15px 0; border-radius: 8px; white-space: pre-wrap; font-family: monospace; font-size: 14px; line-height: 1.8;">
-■ 「Geminiにタスクを説明」に入力したプロンプト：
+■ カスタマイズしたGeminiプロンプト：
 （ここにプロンプト全文を貼り付け）
 
-■ テスト実行の結果：
-（ここに出力結果を貼り付け。メール下書きの内容、スプレッドシートへの記録など）
+■ テスト実行の出力結果：
+（ここにGeminiが生成したニュース要約を貼り付け）
 
 ■ エラー対処の記録（あれば）：
 エラー内容：（ここに記入）
