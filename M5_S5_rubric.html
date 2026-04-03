@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ルーブリック：M5 S5実習課���</title>
+<title>ルーブリック：M5 S5実習課題</title>
 <style>
 body { font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.8; }
 h1 { font-size: 1.5em; border-bottom: 2px solid #333; padding-bottom: 10px; }
@@ -36,8 +36,8 @@ hr { margin: 20px 0; border: none; border-top: 1px solid #ccc; }
 <td>未提出。</td>
 </tr>
 <tr>
-<td><strong>①-b Mermaid記法の正確さ</strong><br>��5点）</td>
-<td>Mermaid Live Editorで正しく描画される。構文エラーがない。</td>
+<td><strong>①-b Mermaid記法の正確さ</strong><br>（5点）</td>
+<td>ChatGPTやGeminiで正しく描画される。構文エラーがない。</td>
 <td>一部構文エラーがあるが、意図は読み取れる。</td>
 <td>Mermaid記法として成立していない、またはフローチャート以外の形式（テキストの箇条書き等）で提出。</td>
 </tr>
@@ -48,20 +48,20 @@ hr { margin: 20px 0; border: none; border-top: 1px solid #ccc; }
 <td>未提出。</td>
 </tr>
 <tr>
-<td><strong>②-a 入出力の網���性</strong><br>（5��）</td>
-<td>フローチャートのすべてのステップについて入出力が定義されている。</td>
+<td><strong>②-a 入出力の網羅性</strong><br>（5点）</td>
+<td>フローチャートのすべてのステップについて入出力が記載されている。</td>
 <td>一部のステップの入出力が抜けている。</td>
 <td>入出力定義が未提出、または1〜2ステップしか記載がない。</td>
 </tr>
 <tr>
-<td><strong>���-b 入出力の具体���</strong><br>（5点）</td>
+<td><strong>②-b 入出力の具体性</strong><br>（5点）</td>
 <td>「候補者名・メールアドレス・応募職種」「返信済みステータス・返信日時」のように具体的なデータ項目が書かれている。</td>
 <td>「データ」「情報」「メール内容」など抽象的な表現が多い。</td>
 <td>入出力の記載が「入力あり→出力あり」レベルで実質的に何も定義されていない。</td>
 </tr>
 <tr>
-<td><strong>③ 描画確認</strong><br>（5��）</td>
-<td>Mermaid Live Editorで描画確認済みであることがわかる（コードがエラーなく動作する）。</td>
+<td><strong>③ 描画確認</strong><br>（5点）</td>
+<td>MermaidコードをChatGPTやGeminiで描画確認済みであることがわかる（コードがエラーなく動作する）。</td>
 <td>描画確認をしていないが、コード自体はおおむね正しい。</td>
 <td>コードが描画不能、または未提出。</td>
 </tr>
@@ -79,29 +79,29 @@ hr { margin: 20px 0; border: none; border-top: 1px solid #ccc; }
 <div class="supplement-box">
 <p>以下の3点を確認してください。</p>
 <p><strong>構造：</strong>開始ノード、処理ノード（フォーム送信・スプレッドシート記録・メール送信・履歴記録）、分岐ノード（応募職種の判定）、終了ノードが含まれているか</p>
-<p><strong>Mermaid記法：</strong>Mermaid Live Editorにコードを貼り付けて描画できるか。できない場合は構文エラーの箇所を特定する</p>
+<p><strong>Mermaid記法：</strong>ChatGPTやGeminiにコードを貼り付けて描画できるか。できない場合は構文エラーの箇所を特定する</p>
 <p><strong>命名：</strong>ノードの名前が業務内容を反映しているか。「フォーム送信」「職種判定」「技術課題メール送信」のように、何をするステップかが名前だけでわかるか</p>
 <p><strong>惜しいケースの例：</strong>フローチャートはあるが分岐がなく、エンジニア職・ビジネス職の両方に同じ処理をしている。または、ノード名が「A→B→C」のままで何をするステップかわからない。</p>
 </div>
 
-<h3>②入出��定義：チェック���イント</h3>
+<h3>②入出力定義：チェックポイント</h3>
 <div class="supplement-box">
-<p>以下の2��を確認してください。</p>
+<p>以下の2点を確認してください。</p>
 <p><strong>網羅性：</strong>フローチャートの全ステップ（フォーム送信・スプレッドシート記録・職種判定・メール送信×2・履歴記録）について入出力が記載されているか</p>
-<p><strong>具体性：</strong>入出力が「候補者名」「メールアドレス」「応募職種（���ンジニア or ビジネス）」「返信済みステータス」のように具体的か。「データを入力→結果を出力」のような記載は不十分</p>
-<p><strong>惜しいケースの���：</strong>入出力定義はあるが、すべてのステップで入力が「データ」出力が「処理結果」と書かれており、具体的に何を指すかわか���ない。</p>
+<p><strong>具体性：</strong>入出力が「候補者名」「メールアドレス」「応募職種（エンジニア or ビジネス）」「返信済みステータス」のように具体的か。「データを入力→結果を出力」のような記載は不十分</p>
+<p><strong>惜しいケースの例：</strong>入出力定義はあるが、すべてのステップで入力が「データ」出力が「処理結果」と書かれており、具体的に何を指すかわからない。</p>
 </div>
 
 <h3>フィードバックのポイント</h3>
 <div class="supplement-box">
 <p><strong>高評価のケース：</strong><br>
-フローチャートに分岐が正しく含まれ、Mermaid Live Editorで描画でき、ノード名がわかりやすい。入出力定義では「候補者名（文字列）」「応募職種（エンジニア / ビジネス）」のようにデータの中身まで書かれている場合、高評価です。</p>
+フローチャートに分岐が正しく含まれ、ChatGPTやGeminiで描画でき、ノード名がわかりやすい。入出力定義では「候補者名（文字列）」「応募職種（エンジニア / ビジネス）」のようにデータの中身まで書かれている場合、高評価です。</p>
 
 <p><strong>改善が必要なケース：</strong><br>
 「入出力をもう少し具体的に書いてください。たとえば『データ』ではなく、どんなデータですか？ 項目名や形式まで書くと、実装するときにそのまま使えます」と促してください。</p>
 
-<p><strong>再提出を求めるケ��ス：</strong><br>
-Mermaidコードまたは入出力定義のどちらかが未提出の場合は再提出を依頼してください。「Mermaidコードをテキストで提出し、各ステップの入出力を表形式で整理してください」と具体的に指示します。</p>
+<p><strong>再提出を求めるケース：</strong><br>
+Mermaidコードまたは入出力定義のどちらかが未提出の場合は再提出を依頼してください。「Mermaidコードをテキストで提出し、各ステップの入出力を整理してください」と具体的に指示します。</p>
 </div>
 
 
