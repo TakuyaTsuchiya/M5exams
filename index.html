@@ -117,18 +117,11 @@ var sidebar = document.getElementById('sidebar');
 var frame = document.getElementById('content-frame');
 var navItems = [];
 
-var currentSection = '';
 tabs.forEach(function(t, i) {
-  if (t.sectionLabel !== currentSection) {
-    currentSection = t.sectionLabel;
-    var header = document.createElement('div');
-    header.className = 'section-header ' + t.section;
-    header.textContent = t.sectionLabel;
-    sidebar.appendChild(header);
-  }
   var el = document.createElement('div');
   el.className = 'nav-item';
-  el.textContent = t.label;
+  var prefix = t.section === 'summary' ? 'まとめ' : t.section.toUpperCase();
+  el.textContent = prefix + ' ' + t.label;
   el.addEventListener('click', function() { switchTab(i); });
   sidebar.appendChild(el);
   navItems.push(el);
