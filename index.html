@@ -8,59 +8,60 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body { height: 100%; font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; }
 
-.tab-bar {
+.layout {
   display: flex;
-  overflow-x: auto;
-  background: #f0f0f0;
-  border-bottom: 2px solid #ccc;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  -webkit-overflow-scrolling: touch;
+  height: 100vh;
 }
-.tab-bar::-webkit-scrollbar { height: 3px; }
-.tab-bar::-webkit-scrollbar-thumb { background: #aaa; border-radius: 3px; }
 
-.tab {
-  flex-shrink: 0;
-  padding: 10px 16px;
-  font-size: 13px;
-  cursor: pointer;
+.sidebar {
+  width: 200px;
+  min-width: 200px;
+  background: #f8f8f8;
   border-right: 1px solid #ddd;
-  background: #f0f0f0;
-  color: #666;
-  white-space: nowrap;
-  transition: background 0.15s, color 0.15s;
+  overflow-y: auto;
+  padding: 12px 0;
+}
+
+.section-group {
+  margin-bottom: 4px;
+}
+
+.section-header {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #555;
   user-select: none;
 }
-.tab:hover { filter: brightness(0.93); }
-.tab.active {
+.section-header.s1 { color: #2563eb; }
+.section-header.s2 { color: #059669; }
+.section-header.s3 { color: #d97706; }
+.section-header.s4 { color: #db2777; }
+.section-header.s5 { color: #4f46e5; }
+.section-header.s6 { color: #7c3aed; }
+.section-header.summary { color: #6b7280; }
+
+.nav-item {
+  display: block;
+  padding: 6px 16px 6px 28px;
+  font-size: 13px;
+  color: #666;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.1s;
+  user-select: none;
+}
+.nav-item:hover { background: #e8e8e8; }
+.nav-item.active {
+  background: #e0e0e0;
   color: #333;
   font-weight: bold;
-  border-bottom: 2px solid #333;
-  margin-bottom: -2px;
-  filter: brightness(0.88);
 }
-/* セクションごとの背景色 */
-.tab.s1 { background: #dbeafe; }
-.tab.s2 { background: #d1fae5; }
-.tab.s3 { background: #fef3c7; }
-.tab.s4 { background: #fce7f3; }
-.tab.s5 { background: #e0e7ff; }
-.tab.s6 { background: #ede9fe; }
-.tab.summary { background: #f3f4f6; }
-/* タブ間の区切り線 */
-.tab.question, .tab.explanation, .tab.rubric { border-left: none; }
 
 .content-frame {
-  position: fixed;
-  top: 42px;
-  left: 0;
-  width: 100%;
-  height: calc(100vh - 42px);
+  flex: 1;
   border: none;
+  height: 100%;
 }
 </style>
 </head>
@@ -75,57 +76,70 @@ html, body { height: 100%; font-family: "Hiragino Sans", "Hiragino Kaku Gothic P
 </div>
 <div id="main-content" style="display:none;">
 
-<div class="tab-bar" id="tab-bar"></div>
+<div class="layout">
+<nav class="sidebar" id="sidebar"></nav>
 <iframe class="content-frame" id="content-frame"></iframe>
+</div>
 
 </div>
 <script src="auth.js"></script>
 <script>
-var tabs = [
-  { label: 'S1 課題', file: 'M5_S1_question.html', type: 'question', section: 's1' },
-  { label: 'S1 解説', file: 'M5_S1_explanation.html', type: 'explanation', section: 's1' },
-  { label: 'S1 ルーブリック', file: 'M5_S1_rubric.html', type: 'rubric', section: 's1' },
-  { label: 'S2 課題', file: 'M5_S2_question.html', type: 'question', section: 's2' },
-  { label: 'S2 解説', file: 'M5_S2_explanation.html', type: 'explanation', section: 's2' },
-  { label: 'S2 ルーブリック', file: 'M5_S2_rubric.html', type: 'rubric', section: 's2' },
-  { label: 'S3 課題', file: 'M5_S3_question.html', type: 'question', section: 's3' },
-  { label: 'S3 解説', file: 'M5_S3_explanation.html', type: 'explanation', section: 's3' },
-  { label: 'S3 ルーブリック', file: 'M5_S3_rubric.html', type: 'rubric', section: 's3' },
-  { label: 'S4 課題', file: 'M5_S4_question.html', type: 'question', section: 's4' },
-  { label: 'S4 解説', file: 'M5_S4_explanation.html', type: 'explanation', section: 's4' },
-  { label: 'S4 ルーブリック', file: 'M5_S4_rubric.html', type: 'rubric', section: 's4' },
-  { label: 'S5 課題', file: 'M5_S5_question.html', type: 'question', section: 's5' },
-  { label: 'S5 解説', file: 'M5_S5_explanation.html', type: 'explanation', section: 's5' },
-  { label: 'S5 ルーブリック', file: 'M5_S5_rubric.html', type: 'rubric', section: 's5' },
-  { label: 'S6 課題', file: 'M5_S6_question.html', type: 'question', section: 's6' },
-  { label: 'S6 解説', file: 'M5_S6_explanation.html', type: 'explanation', section: 's6' },
-  { label: 'S6 ルーブリック', file: 'M5_S6_rubric.html', type: 'rubric', section: 's6' },
-  { label: 'まとめ 課題', file: 'M5_summary_question.html', type: 'question', section: 'summary' },
-  { label: 'まとめ 解説', file: 'M5_summary_explanation.html', type: 'explanation', section: 'summary' },
-  { label: 'まとめ ルーブリック', file: 'M5_summary_rubric.html', type: 'rubric', section: 'summary' }
+var sections = [
+  { id: 's1', label: 'S1 Botを作る' },
+  { id: 's2', label: 'S2 知識を足す' },
+  { id: 's3', label: 'S3 機能を足す' },
+  { id: 's4', label: 'S4 カスタマイズ' },
+  { id: 's5', label: 'S5 ワークフロー設計' },
+  { id: 's6', label: 'S6 Studio実践' },
+  { id: 'summary', label: 'まとめ' }
 ];
 
-var bar = document.getElementById('tab-bar');
-var frame = document.getElementById('content-frame');
+var types = [
+  { type: 'question', label: '課題' },
+  { type: 'explanation', label: '解説' },
+  { type: 'rubric', label: 'ルーブリック' }
+];
 
+var tabs = [];
+sections.forEach(function(s) {
+  types.forEach(function(t) {
+    var prefix = s.id === 'summary' ? 'M5_summary' : 'M5_' + s.id.toUpperCase();
+    tabs.push({
+      label: t.label,
+      file: prefix + '_' + t.type + '.html',
+      section: s.id,
+      sectionLabel: s.label
+    });
+  });
+});
+
+var sidebar = document.getElementById('sidebar');
+var frame = document.getElementById('content-frame');
+var navItems = [];
+
+var currentSection = '';
 tabs.forEach(function(t, i) {
+  if (t.sectionLabel !== currentSection) {
+    currentSection = t.sectionLabel;
+    var header = document.createElement('div');
+    header.className = 'section-header ' + t.section;
+    header.textContent = t.sectionLabel;
+    sidebar.appendChild(header);
+  }
   var el = document.createElement('div');
-  el.className = 'tab ' + t.type + ' ' + t.section;
+  el.className = 'nav-item';
   el.textContent = t.label;
   el.addEventListener('click', function() { switchTab(i); });
-  bar.appendChild(el);
+  sidebar.appendChild(el);
+  navItems.push(el);
 });
 
 function switchTab(i) {
-  var all = bar.querySelectorAll('.tab');
-  all.forEach(function(el) { el.classList.remove('active'); });
-  all[i].classList.add('active');
+  navItems.forEach(function(el) { el.classList.remove('active'); });
+  navItems[i].classList.add('active');
   frame.src = tabs[i].file + '?v=' + Date.now();
-  // Scroll tab into view
-  all[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
 }
 
-// Start with S1 課題
 var observer = new MutationObserver(function() {
   if (document.getElementById('main-content').style.display !== 'none') {
     switchTab(0);
@@ -133,7 +147,6 @@ var observer = new MutationObserver(function() {
   }
 });
 observer.observe(document.getElementById('main-content'), { attributes: true, attributeFilter: ['style'] });
-// Also handle case where already visible
 if (document.getElementById('main-content').style.display !== 'none') {
   switchTab(0);
 }
