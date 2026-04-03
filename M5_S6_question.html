@@ -33,17 +33,38 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 <h3>手順</h3>
 
 <h4>ステップ① テンプレートをコピーする</h4>
-<p><a href="https://studio.workspace.google.com" target="_blank">https://studio.workspace.google.com</a> にアクセスしてください。「Everyday essentials」カテゴリにある「Get news headlines summarized daily」テンプレートを選び、自分の環境にコピーしてください。</p>
+<p><a href="https://studio.workspace.google.com" target="_blank">https://studio.workspace.google.com</a> にアクセスしてください。「Everyday essentials」カテゴリにある「Get news headlines summarized daily」をクリックしてください。</p>
 
 <h4>ステップ② Geminiプロンプトをカスタマイズする</h4>
-<p>テンプレートの「Step 2: Ask Gemini」を開くと、英語のプロンプトが入っています。まず日本語に書き換えてから、あなたの業務や業界に合わせてカスタマイズしてください。</p>
+<p>テンプレートの「Step 2: Ask Gemini」を開くと、英語のプロンプトが入っています。以下がその日本語訳です。この中の<strong>「背景」の部分だけ</strong>を、あなたの業務や業界に合わせて書き換えてください。それ以外の指示や出力形式はそのまま使えます。</p>
 
 <div style="background: #f5f5f5; border-left: 4px solid #666; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
-<strong>カスタマイズの例</strong><br><br>
-<strong>人事の場合：</strong>採用市場・HRテック・リモートワーク動向に絞る<br>
-<strong>営業の場合：</strong>担当業界の市場動向・競合ニュースに絞る<br>
-<strong>エンジニアの場合：</strong>AI・クラウド・セキュリティの技術ニュースに絞る<br><br>
-自分が毎朝チェックしたい情報を具体的に指定するのがポイントです。
+<strong>プロンプトの日本語訳</strong><br><br>
+現在の日時は {current date and time} です。<br><br>
+仕事を始めるにあたり、過去24時間のニュースを簡潔にまとめてください。<br><br>
+<strong>【↓ここを書き換える↓】</strong><br>
+<strong>背景：</strong><br>
+私は世界の重要な出来事、ビジネスの最新情報、異常気象、スポーツの結果やハイライトに関心があります。この背景をもとに、以下の指示をより関連性の高い内容にしてください。<br>
+<strong>【↑ここを書き換える↑】</strong><br><br>
+指示：<br>
+- 過去24時間のニュースのみを含めてください。<br>
+- 主要なヘッドラインは何ですか？記事に直接つながるリンクを必ず付けてください。<br>
+- 出力を見直し、記事のリンクと記事日付を末尾に追記してください。<br>
+- 事実のみを伝え、コメントや意見は加えないでください。<br>
+- 見出しごとに箇条書きで区切り、読みやすくスペースを空けてください。<br>
+- 見出しごとに内容を反映した絵文字を付け、見やすく整形してください。<br>
+- 冒頭のあいさつや前置きは不要です。<br>
+- 重複する見出しは除外してください。
+</div>
+
+<div style="background: #e8f4f8; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
+<strong>「背景」の書き換え例</strong><br><br>
+<strong>人事の場合：</strong><br>
+私はHRテック企業の人事部で働いています。採用市場の動向、HRテック・人事系SaaSの最新情報、リモートワーク・働き方改革に関するニュースに関心があります。<br><br>
+<strong>営業の場合：</strong><br>
+私は不動産業界の営業職です。不動産市場の動向、競合他社のニュース、住宅ローン金利の変化に関心があります。<br><br>
+<strong>エンジニアの場合：</strong><br>
+私はWebエンジニアです。AI・機械学習、クラウドサービスのアップデート、セキュリティに関する技術ニュースに関心があります。
 </div>
 
 <h4>ステップ③ テスト実行</h4>
