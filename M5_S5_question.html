@@ -43,8 +43,8 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 
 <h3>手順</h3>
 
-<h4>ステップ① 業務フローをMermaid記法に変換する</h4>
-<p>ChatGPTかGeminiに下記のプロンプトを渡して、Mermaid記法のフローチャートに変換してもらってください。また、分岐がある場合はダイヤモンド記号を使うよう指示してください。</p>
+<h4>ステップ① AIでMermaidフローチャートを作成・確認する</h4>
+<p>ChatGPTかGeminiに下記のプロンプトを渡して、Mermaid記法のフローチャートに変換してもらってください。描画結果を確認し、分岐の条件が明確か、抜けているステップがないかをチェックしてください。問題があればその場でAIに修正を依頼します。</p>
 
 <div style="background: #f5f5f5; border-left: 4px solid #666; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
 <strong>AIへのプロンプト</strong><br><br>
@@ -59,10 +59,7 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 6. 対応履歴をスプレッドシートに記録する</code>
 </div>
 
-<h4>ステップ② フローチャートを確認する</h4>
-<p>生成されたMermaidコードをChatGPTかGeminiに貼り付けて「このフローチャートを表示して」と依頼し、正しく描画されるか確認してください。分岐の条件が明確か、抜けているステップがないかを確認してください。エラーが出る場合はAIと相談して修正を依頼します。</p>
-
-<h4>ステップ③ 入出力定義を作成する</h4>
+<h4>ステップ② 入出力定義を作成する</h4>
 <p>フローチャートの各ステップについて「何が入力で、何が出力か」を表形式で整理してください。「データ」「情報」のような曖昧な表現ではなく、具体的に書くのがポイントです。</p>
 
 <div style="background: #f5f5f5; border-left: 4px solid #666; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
