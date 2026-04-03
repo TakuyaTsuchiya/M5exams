@@ -63,18 +63,21 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 <p>Mermaid図が正しく描画されているか、分岐の条件が明確か、抜けているステップがないかをチェックしてください。問題があればAIに修正を依頼してください。</p>
 
 <h4>ステップ③ 入出力定義を作成する</h4>
-<p>フローチャートの各ステップについて「何が入力で、何が出力か」を以下の形式で整理してください。「データ」「情報」のような曖昧な表現ではなく、具体的に書くのがポイントです。</p>
+<p>ステップ①で作ったMermaidコードをAIに渡して「各ステップの入力と出力を整理して」と依頼してください。AIが出力した結果を確認し、「データ」「情報」のような曖昧な表現があれば具体的な項目名に修正してください。</p>
 
 <div style="background: #f5f5f5; border-left: 4px solid #666; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
-<strong>入出力定義の書き方の例</strong><br><br>
-<pre style="background-color: #e8e8e8; padding: 10px; border-radius: 4px; white-space: pre-wrap; font-size: 13px; line-height: 1.6;">ステップ1：フォーム送信
-　入力：候補者名・メールアドレス・応募職種・職務経歴（テキスト）
-　出力：フォーム回答データ（1行分）
+<strong>AIへのプロンプト</strong><br><br>
+<code style="background-color: #e8e8e8; padding: 10px; display: block; white-space: pre-wrap; border-radius: 4px;">上記のMermaidフローチャートについて、各ステップの入力と出力を以下の形式で整理してください。
+「データ」「情報」のような曖昧な表現ではなく、具体的な項目名で書いてください。
 
-ステップ2：スプレッドシート記録
-　入力：フォーム回答データ
-　出力：スプレッドシートの新規行（タイムスタンプ付き）</pre>
-<p style="margin-top: 10px; font-size: 14px; color: #666;">※ 上記は最初の2ステップの例です。残りのステップも同様に記載してください。</p>
+ステップ1：（ステップ名）
+　入力：（具体的な項目名）
+　出力：（具体的な項目名）</code>
+</div>
+
+<div style="background: #e8f4f8; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
+<strong>確認のポイント</strong><br>
+AIの出力に「データ」「情報」のような曖昧な表現が残っていたら、具体的に何を指すか考えて修正してください。たとえば「メールデータ」→「候補者名・メールアドレス・メールテンプレート」のように書き換えます。
 </div>
 
 <hr>
