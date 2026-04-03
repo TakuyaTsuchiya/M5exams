@@ -52,6 +52,16 @@ ul li, ol li { margin-bottom: 10px; }
 <li><strong>改善の起点として</strong> ── フローを図にすると「ここは手動でやる必要がない」「この分岐はもっと細かくできる」といった改善点が見えてくる</li>
 </ul>
 
+<h3>Mermaidコードの回答例</h3>
+<p>課題文の箇条書きをAIに渡すと、以下のようなMermaidコードが生成されます。</p>
+<pre style="background: #f5f5f5; border: 1px solid #ddd; padding: 15px; border-radius: 8px; font-size: 13px; line-height: 1.6; white-space: pre-wrap;">flowchart TD
+    A[候補者がGoogleフォームからエントリーする] --> B[回答がスプレッドシートに自動記録される]
+    B --> C{応募職種を判定する}
+    C -->|エンジニア職| D[技術課題の案内メールを自動返信する]
+    C -->|ビジネス職| E[面接日程調整の案内メールを自動返信する]
+    D --> F[対応履歴をスプレッドシートに記録する]
+    E --> F</pre>
+
 <hr>
 
 <div class="purpose-box">
