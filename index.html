@@ -43,20 +43,27 @@ html, body { height: 100%; font-family: "Hiragino Sans", "Hiragino Kaku Gothic P
 
 .nav-item {
   display: block;
-  padding: 6px 16px 6px 28px;
+  padding: 6px 16px;
   font-size: 13px;
-  color: #666;
+  color: #555;
   cursor: pointer;
   text-decoration: none;
   transition: background 0.1s;
   user-select: none;
 }
-.nav-item:hover { background: #e8e8e8; }
+.nav-item:hover { filter: brightness(0.93); }
 .nav-item.active {
-  background: #e0e0e0;
-  color: #333;
   font-weight: bold;
+  color: #333;
+  filter: brightness(0.88);
 }
+.nav-item.s1 { background: #dbeafe; }
+.nav-item.s2 { background: #d1fae5; }
+.nav-item.s3 { background: #fef3c7; }
+.nav-item.s4 { background: #fce7f3; }
+.nav-item.s5 { background: #e0e7ff; }
+.nav-item.s6 { background: #ede9fe; }
+.nav-item.summary { background: #f3f4f6; }
 
 .content-frame {
   flex: 1;
@@ -119,7 +126,7 @@ var navItems = [];
 
 tabs.forEach(function(t, i) {
   var el = document.createElement('div');
-  el.className = 'nav-item';
+  el.className = 'nav-item ' + t.section;
   var prefix = t.section === 'summary' ? 'まとめ' : t.section.toUpperCase();
   el.textContent = prefix + ' ' + t.label;
   el.addEventListener('click', function() { switchTab(i); });
