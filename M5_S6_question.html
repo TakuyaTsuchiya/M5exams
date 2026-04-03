@@ -20,11 +20,11 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 <p>セクション5まではAIに手動で指示を出していました。セクション6では、<strong>Google Workspace Studioを使って、毎朝自分の業界のニュースが届く仕組みを作ります</strong>。</p>
 
 <h3>課題</h3>
-<p>Workspace Studioの「ニュース収集・要約」テンプレートを使って、自分の業界のニュースを毎日届けてくれるワークフローを作ってください。テンプレートの中にあるGeminiプロンプトを、<strong>あなたの業務に合わせて書き換える</strong>のがポイントです。</p>
+<p>Google Workspace Studioの「自動ニュース収集・要約」テンプレートを使って、自分の業界のニュースを毎日届けてくれるワークフローを作ってください。テンプレートの中にあるGeminiプロンプトを、<strong>あなたの業務に合わせて書き換える</strong>のがポイントです。</p>
 
 <h3>成果物</h3>
 <ul>
-<li><strong>カスタマイズしたGeminiプロンプト</strong> ── テンプレートのプロンプトをどう書き換えたか、全文</li>
+<li><strong>カスタマイズしたGeminiプロンプト</strong> ── 書き換えた「背景」部分を含むプロンプト全文</li>
 <li><strong>テスト実行の出力結果</strong> ── Geminiが生成したニュース要約のテキスト</li>
 </ul>
 
@@ -33,14 +33,19 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 <h3>手順</h3>
 
 <h4>ステップ① テンプレートをコピーする</h4>
-<p><a href="https://studio.workspace.google.com" target="_blank">https://studio.workspace.google.com</a> にアクセスしてください。「Everyday essentials」カテゴリにある「Get news headlines summarized daily」をクリックしてください。</p>
+<p><a href="https://studio.workspace.google.com" target="_blank">https://studio.workspace.google.com</a> にアクセスしてください。「Everyday essentials」（毎日の必需品）カテゴリにある「Get news headlines summarized daily」（ニュースの見出しを毎日要約する）をクリックしてください。</p>
 
 <h4>ステップ② Geminiプロンプトをカスタマイズする</h4>
-<p>テンプレートの「Step 2: Ask Gemini」を開くと、英語のプロンプトが入っています。以下がその日本語訳です。この中の<strong>「背景」の部分だけ</strong>を、あなたの業務や業界に合わせて書き換えてください。それ以外の指示や出力形式はそのまま使えます。</p>
+<p>テンプレートの「Step 2: Ask Gemini」を開くと、英語のプロンプトが入っています。以下の手順で日本語に置き換えてください。</p>
+<ol>
+<li><strong>1行目の「The date and time is ○○.」はそのまま残す</strong>（○○は変数チップです。日時が自動で入る部品なので消さないでください）</li>
+<li>2行目以降の英語をすべて削除する</li>
+<li>下の「コピー用プロンプト」をコピー＆ペーストする</li>
+<li><strong>「背景」の部分だけ</strong>、あなたの業務や業界に合わせて書き換える</li>
+</ol>
 
 <div style="background: #f5f5f5; border-left: 4px solid #666; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
-<strong>プロンプトの日本語訳</strong><br><br>
-現在の日時は {current date and time} です。<br><br>
+<strong>コピー用プロンプト</strong><br><br>
 仕事を始めるにあたり、過去24時間のニュースを簡潔にまとめてください。<br><br>
 <strong>【↓ここを書き換える↓】</strong><br>
 <strong>背景：</strong><br>
