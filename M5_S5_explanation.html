@@ -24,6 +24,16 @@ ul li, ol li { margin-bottom: 10px; }
 <p>ワークフロー設計とは、業務の流れを「どの順番で」「どう分岐して」「何を受け渡すか」まで具体化することです。これができると、Bot単体では自動化できなかった一連の業務をまとめて仕組み化できます。</p>
 </div>
 
+<h3>Mermaidコードの回答例</h3>
+<p>課題文の箇条書きをAIに渡すと、以下のようなMermaidコードが生成されます。</p>
+<pre style="background: #f5f5f5; border: 1px solid #ddd; padding: 15px; border-radius: 8px; font-size: 13px; line-height: 1.6; white-space: pre-wrap;">flowchart TD
+    A[候補者がGoogleフォームからエントリーする] --> B[回答がスプレッドシートに自動記録される]
+    B --> C{応募職種を判定する}
+    C -->|エンジニア職| D[技術課題の案内メールを自動返信する]
+    C -->|ビジネス職| E[面接日程調整の案内メールを自動返信する]
+    D --> F[対応履歴をスプレッドシートに記録する]
+    E --> F</pre>
+
 <hr>
 
 <h3>フローチャートと入出力定義の役割</h3>
@@ -51,16 +61,6 @@ ul li, ol li { margin-bottom: 10px; }
 <li><strong>業務の引き継ぎに</strong> ── フローチャートがあれば、新しいメンバーにも「この業務はこの順番で、ここで分岐する」と一目で伝わる</li>
 <li><strong>改善の起点として</strong> ── フローを図にすると「ここは手動でやる必要がない」「この分岐はもっと細かくできる」といった改善点が見えてくる</li>
 </ul>
-
-<h3>Mermaidコードの回答例</h3>
-<p>課題文の箇条書きをAIに渡すと、以下のようなMermaidコードが生成されます。</p>
-<pre style="background: #f5f5f5; border: 1px solid #ddd; padding: 15px; border-radius: 8px; font-size: 13px; line-height: 1.6; white-space: pre-wrap;">flowchart TD
-    A[候補者がGoogleフォームからエントリーする] --> B[回答がスプレッドシートに自動記録される]
-    B --> C{応募職種を判定する}
-    C -->|エンジニア職| D[技術課題の案内メールを自動返信する]
-    C -->|ビジネス職| E[面接日程調整の案内メールを自動返信する]
-    D --> F[対応履歴をスプレッドシートに記録する]
-    E --> F</pre>
 
 <hr>
 
