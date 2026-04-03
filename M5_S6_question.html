@@ -14,15 +14,13 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 </head>
 <body>
 
-<h1>実習課題：Google Workspace Studioでニュース要約フローを動かそう</h1>
+<h1>実習課題：ニュース収集・要約フローを自動化しよう</h1>
 
 <h3>目的</h3>
-<p>セクション5まではAIへの指示の書き方を学んできました。セクション6では、Google Workspace Studioを使って<strong>AIが自動で動く仕組み</strong>を体験します。</p>
-<p>この課題の目的は、<strong>Workspace Studioのテンプレートを自分の環境で動かし、Geminiへのプロンプトを自分の業務や興味に合わせてカスタマイズすること</strong>です。</p>
+<p>セクション5まではAIに手動で指示を出していました。セクション6では、<strong>Google Workspace Studioを使って、毎朝自分の業界のニュースが届く仕組みを作ります</strong>。</p>
 
 <h3>課題</h3>
-<p>Workspace Studioに用意されている「ニュース要約」テンプレートを自分の環境にコピーしてください。このテンプレートは、毎日Geminiがニュースの見出しを要約してGoogle Chatに通知してくれるワークフローです。</p>
-<p>テンプレートの中にあるGeminiへのプロンプトを、<strong>あなたの業務や業界に関するニュースを届けてくれるように書き換えて</strong>ください。書き換えたらテスト実行して、出力結果を確認します。</p>
+<p>Workspace Studioの「ニュース収集・要約」テンプレートを使って、自分の業界のニュースを毎日届けてくれるワークフローを作ってください。テンプレートの中にあるGeminiプロンプトを、<strong>あなたの業務に合わせて書き換える</strong>のがポイントです。</p>
 
 <h3>成果物</h3>
 <ul>
@@ -38,7 +36,7 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 <p><a href="https://studio.workspace.google.com" target="_blank">https://studio.workspace.google.com</a> にアクセスしてください。「Everyday essentials」カテゴリにある「Get news headlines summarized daily」テンプレートを選び、自分の環境にコピーしてください。</p>
 
 <h4>ステップ② Geminiプロンプトをカスタマイズする</h4>
-<p>テンプレートの「Step 2: Ask Gemini」を開くと、ニュースを要約するためのプロンプトが入っています。このプロンプトを、あなたの業務や業界に合わせて書き換えてください。</p>
+<p>テンプレートの「Step 2: Ask Gemini」を開くと、英語のプロンプトが入っています。まず日本語に書き換えてから、あなたの業務や業界に合わせてカスタマイズしてください。</p>
 
 <div style="background: #f5f5f5; border-left: 4px solid #666; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
 <strong>カスタマイズの例</strong><br><br>
@@ -49,7 +47,7 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 </div>
 
 <h4>ステップ③ テスト実行</h4>
-<p>画面下部の「テスト実行」→「開始」をクリックしてください。「実行完了」と表示されたら、Geminiが生成したニュース要約の内容を確認してください。</p>
+<p>画面下部の「Turn on」でワークフローを有効にしてから、「Test run」をクリックしてください。「Run Completed」と表示されたら、Geminiが生成したニュース要約の内容を確認してください。</p>
 
 <h4>ステップ④ うまくいかない場合</h4>
 <p>エラーが出た場合は、エラーメッセージをChatGPTかGeminiに貼り付けて原因と対処法を聞いてください。</p>

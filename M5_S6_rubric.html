@@ -13,7 +13,6 @@ hr { margin: 20px 0; border: none; border-top: 1px solid #ccc; }
 .check-table th, .check-table td { border: 1px solid #ccc; padding: 10px; text-align: left; }
 .check-table th { background-color: #f0f0f0; }
 .supplement-box { background-color: #fff9e6; border-left: 4px solid #f39c12; padding: 15px; margin: 15px 0; }
-.default-prompt { background-color: #f5f5f5; border: 1px solid #ccc; padding: 15px; margin: 15px 0; border-radius: 8px; white-space: pre-wrap; font-size: 13px; line-height: 1.6; }
 </style>
 </head>
 <body>
@@ -22,34 +21,8 @@ hr { margin: 20px 0; border: none; border-top: 1px solid #ccc; }
 
 <p>評価対象は<strong>受講生がカスタマイズしたGeminiプロンプト</strong>です。Geminiが生成したニュース要約の品質は評価しません。</p>
 
-<h3>テンプレートのデフォルトプロンプト（採点時の比較用）</h3>
-<p>以下がテンプレートに最初から入っているプロンプトです。受講生の提出物がこれとどの程度変わっているかを見てください。</p>
-
-<div class="default-prompt">The date and time is ​{current date and time}​.
-
-Give me a quick update as I start my work day, keep the updates locked to just what happened in the last 24 hours.
-
-Context:
-I am interested in important and recent world events, business updates, extreme weather events, sports recent results and highlights and so use this context to make the below instructions more relevant for me in terms of details and research.
-
-Instructions:
-- ONLY include news for today, from the past 24 hours.
-- What are the top headlines on the news? ALWAYS provide links that lead directly to the referenced articles, not the landing page.
-- Reread your output and append the article links and the actual article dates so i can read more if I want to like this [date of article] - link.
-- Keep the news straight, stick to the facts, don't add any additional commentary or opinions.
-- Ensure the headlines are spaced out using separate bullet points to improve reader legibility and clarity.
-- Format it beautifully, space it out with new lines and use all things rich text. Include emojis beside each heading.
-- Do not include any introductory phrases, conversational text, or preamble before the list of headlines.
-- Exclude all non-essential information from the output, such as dates, timestamps, or personal greetings.
-- Exclude redundant headlines.
-
-Output:
-Use headers, bolding, spacing, line breaks, emojis and links to make the output look great.
-Links should have the label "link" not the full URL as the label.
-
-Output Example:
-**Today's Top News**:
-**Brief Headline** - Sentence summary - &lt;link&gt;</div>
+<h3>テンプレートのデフォルト（参考）</h3>
+<p>テンプレートには英語で「世界のニュース・ビジネス・天気・スポーツの最新ヘッドラインを要約して」という汎用的なプロンプトが入っています。受講生はこれを日本語に書き換え、自分の業務・業界に合わせてカスタマイズして提出します。</p>
 
 <hr>
 
