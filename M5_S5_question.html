@@ -47,10 +47,10 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 <h3>手順</h3>
 
 <h4>ステップ① 業務フローをMermaid記法に変換する</h4>
-<p>ChatGPTやGeminiに上記の箇条書きを渡して「Mermaid記法のフローチャートに変換して」と依頼してください。分岐がある場合はダイヤモンド記号を使うよう指示します。</p>
+<p>ChatGPTやGeminiに下記のプロンプトを渡して、Mermaid記法のフローチャートに変換してもらってください。また、分岐がある場合はダイヤモンド記号を使うよう指示してください。</p>
 
 <div style="background: #f5f5f5; border-left: 4px solid #666; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
-<strong>AIへのプロンプト例</strong><br><br>
+<strong>AIへのプロンプト</strong><br><br>
 <code style="background-color: #e8e8e8; padding: 10px; display: block; white-space: pre-wrap; border-radius: 4px;">以下の業務フローをMermaid記法のフローチャートに変換してください。
 分岐がある場合はダイヤモンド記号を使ってください。
 
@@ -62,31 +62,21 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 6. 対応履歴をスプレッドシートに記録する</code>
 </div>
 
-<h4>ステップ② Mermaid Live Editorで確認する</h4>
-<p>Mermaid Live Editor（<a href="https://mermaid.live" target="_blank">mermaid.live</a>）にコードを貼り付けて、フローチャートが正しく表示されるか確認してください。エラーが出る場合はAIにエラー内容を伝えて修正を依頼します。開始・処理・分岐・終了が含まれているか、分岐の条件が明確か、抜けているステップがないかを確認してください。</p>
+<h4>ステップ② フローチャートを確認する</h4>
+<p>生成されたMermaidコードをChatGPTやGeminiに貼り付けて「このフローチャートを表示して」と依頼し、正しく描画されるか確認してください。開始・処理・分岐・終了が含まれているか、分岐の条件が明確か、抜けているステップがないかを確認してください。エラーが出る場合はそのまま修正を依頼します。</p>
 
 <h4>ステップ③ 入出力定義を作成する</h4>
 <p>フローチャートの各ステップについて「何が入力で、何が出力か」を表形式で整理してください。「データ」「情報」のような曖昧な表現ではなく、具体的に書くのがポイントです。</p>
 
 <div style="background: #f5f5f5; border-left: 4px solid #666; padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0;">
 <strong>入出力定義の書き方の例</strong><br><br>
-<table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
-<tr style="background-color: #e8e8e8;">
-<th style="border: 1px solid #ccc; padding: 8px; text-align: left;">ステップ</th>
-<th style="border: 1px solid #ccc; padding: 8px; text-align: left;">入力</th>
-<th style="border: 1px solid #ccc; padding: 8px; text-align: left;">出力</th>
-</tr>
-<tr>
-<td style="border: 1px solid #ccc; padding: 8px;">フォーム送信</td>
-<td style="border: 1px solid #ccc; padding: 8px;">候補者名・メールアドレス・応募職種・職務経歴（テキスト）</td>
-<td style="border: 1px solid #ccc; padding: 8px;">フォーム回答データ（1行分）</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ccc; padding: 8px;">スプレッドシート記録</td>
-<td style="border: 1px solid #ccc; padding: 8px;">フォーム回答データ</td>
-<td style="border: 1px solid #ccc; padding: 8px;">スプレッドシートの新規行（タイムスタンプ付き）</td>
-</tr>
-</table>
+<pre style="background-color: #e8e8e8; padding: 10px; border-radius: 4px; white-space: pre-wrap; font-size: 13px; line-height: 1.6;">ステップ1：フォーム送信
+　入力：候補者名・メールアドレス・応募職種・職務経歴（テキスト）
+　出力：フォーム回答データ（1行分）
+
+ステップ2：スプレッドシート記録
+　入力：フォーム回答データ
+　出力：スプレッドシートの新規行（タイムスタンプ付き）</pre>
 <p style="margin-top: 10px; font-size: 14px; color: #666;">※ 上記は最初の2ステップの例です。残りのステップも同様に記載してください。</p>
 </div>
 
@@ -101,9 +91,16 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 （ここにMermaidコードを貼り付け）
 
 ■ 入出力定義：
-| ステップ | 入力 | 出力 |
-|---|---|---|
-| （ここに記入） | （ここに記入） | （ここに記入） |
+
+ステップ1：（ステップ名）
+　入力：（ここに記入）
+　出力：（ここに記入）
+
+ステップ2：（ステップ名）
+　入力：（ここに記入）
+　出力：（ここに記入）
+
+（以下、すべてのステップについて同様に記入）
 </div>
 
 
