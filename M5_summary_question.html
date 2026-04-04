@@ -25,7 +25,7 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 
 <h3>成果物</h3>
 <ul>
-<li><strong>カスタマイズしたGeminiプロンプト</strong> ── 書き換えた緊急判定の基準</li>
+<li><strong>カスタマイズしたGeminiプロンプト</strong> ── 書き換えた「緊急の基準」と「緊急ではない基準」</li>
 <li><strong>テスト実行の出力結果</strong> ── Geminiが生成した通知テキスト</li>
 </ul>
 
@@ -45,9 +45,8 @@ hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
 <ol>
 <li>英語のプロンプトのうち、<strong>末尾の「Sender:」「Email subject:」「Email body:」の3行は残して</strong>、それより上の英語をすべて削除する</li>
 <li>残した3行の上に、下のプロンプトをコピーして貼り付ける</li>
-<li><strong>「緊急の基準」の部分だけ</strong>、あなたの業務に合わせて書き換える</li>
+<li><strong>「緊急の基準」と「緊急ではない基準」の部分</strong>を、あなたの業務に合わせて書き換える</li>
 </ol>
-<p style="color: red;"><strong>※ 書き換えたら必ず「Save changes」をクリックしてください。保存しないとテスト実行に反映されません。</strong></p>
 
 <p>以下はテンプレートの英語プロンプトを日本語に翻訳したものです。このまま「Step 2: Decide」にコピーして貼り付けてください。</p>
 
@@ -117,7 +116,7 @@ Email body: （変数が入っています。削除しないでください）<b
 
 <p>以下のテンプレートに内容を入れて提出してください。</p>
 
-<div style="background: #f5f5f5; border: 1px solid #ccc; padding: 20px; margin: 15px 0; border-radius: 8px; white-space: pre-wrap; font-family: monospace; font-size: 14px; line-height: 1.8;">■ カスタマイズした「緊急の基準」プロンプト：
+<div style="background: #f5f5f5; border: 1px solid #ccc; padding: 20px; margin: 15px 0; border-radius: 8px; white-space: pre-wrap; font-family: monospace; font-size: 14px; line-height: 1.8;">■ カスタマイズした「緊急の基準」「緊急ではない基準」プロンプト：
 （ここに貼り付け）
 
 ■ テスト実行の出力結果：
