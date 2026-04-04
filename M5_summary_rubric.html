@@ -19,8 +19,20 @@ hr { margin: 20px 0; border: none; border-top: 1px solid #ccc; }
 
 <h1>ルーブリック（採点基準）</h1>
 
+<p>評価対象は<strong>受講生が書き換えたプロンプトの「緊急の基準」欄</strong>です。Geminiが生成した通知テキストの品質は評価しません。</p>
+
+<h3>テンプレートのデフォルト（参考）</h3>
+<p>テンプレートの「Step 2: Decide」には英語で以下の緊急基準が入っています。受講生はこれを自分の業務に合わせて書き換えて提出します。</p>
+<div class="supplement-box">
+<strong>デフォルトの緊急基準（英語の要旨）：</strong><br>
+緊急：差し迫った締切 / 重大なシステム障害・本番障害・財務リスク / 上位者からの即座の対応依頼<br>
+緊急ではない：カレンダー・会議の通知 / マーケティングニュースレター / 緊急性のないシステム通知
+</div>
+
+<hr>
+
 <h3>採点基準</h3>
-<p>合計30点満点で評価します。課題設定・設計、Bot＋ワークフロー実装、振り返りの3観点で採点します。</p>
+<p>合計30点満点で評価します。</p>
 
 <table class="check-table">
 <tr>
@@ -30,21 +42,15 @@ hr { margin: 20px 0; border: none; border-top: 1px solid #ccc; }
 <th>NG（0点）</th>
 </tr>
 <tr>
-<td><strong>①課題設定と設計</strong><br>（12点）</td>
-<td>具体的な業務が選ばれ、フローチャートで業務全体が可視化されている</td>
-<td>業務は選ばれているが設計が粗い</td>
+<td><strong>①プロンプトの「緊急の基準」欄</strong><br>（15点）</td>
+<td>自分の業務に合わせて緊急基準を具体的に書き換えている（業務固有の緊急事態と非緊急事態が区別されている）</td>
+<td>書き換えてはいるが曖昧（「重要なメール」程度で、何が緊急かの判断基準が不明確）</td>
 <td>未提出</td>
 </tr>
 <tr>
-<td><strong>②Bot＋ワークフロー実装</strong><br>（12点）</td>
-<td>Botとワークフローが連動し、テスト実行で動作確認されている</td>
-<td>BotまたはWFの一方のみ実装されている</td>
-<td>未提出</td>
-</tr>
-<tr>
-<td><strong>③振り返りと発展性</strong><br>（6点）</td>
-<td>自動化前後の比較や改善アイデアが具体的に書かれている</td>
-<td>振り返りが表面的</td>
+<td><strong>②テスト実行結果</strong><br>（15点）</td>
+<td>テスト実行の出力結果が提出されている</td>
+<td>出力はあるがプロンプトの基準と整合しない（基準を書き換えたのにデフォルトの判定が出ている場合、Save changesせずにテスト実行した可能性が高い）</td>
 <td>未提出</td>
 </tr>
 </table>
@@ -53,15 +59,29 @@ hr { margin: 20px 0; border: none; border-top: 1px solid #ccc; }
 
 <h3>フィードバックのポイント</h3>
 <div class="supplement-box">
-<p><strong>高評価のケース：</strong><br>
-具体的な業務が選ばれ、Mermaid記法のフローチャートで業務全体が可視化されている。Botとワークフローが連動してテスト実行で動作確認されており、振り返りで自動化前後の比較や改善アイデアが具体的に書かれている場合、高評価です。</p>
+<p><strong>高評価：</strong>緊急基準に自分の業務固有の状況が具体的に書かれている（例：「内定者の辞退連絡」「本番環境の障害アラート」「顧客からのクレーム」など）。緊急/非緊急の両方が定義されている。</p>
 
-<p><strong>改善が必要なケース：</strong><br>
-すべてを完璧に自動化できなくても、一部でも自動化できていれば大きな一歩です。「ここまでは自動化できた」「ここは手動が残った」という切り分けができていること自体が重要なスキルです。設計が粗い場合は「フローチャートで業務の流れを可視化してください」、振り返りが表面的な場合は「自動化前後の所要時間の比較や、具体的な改善アイデアを記載してください」とフィードバックします。</p>
+<p><strong>改善を促す：</strong>基準が曖昧な場合は「自分の業務で『これが来たらすぐ対応しないといけない』メールを具体的に思い浮かべて書いてみてください」と伝える。テスト結果が未記入の場合は「テスト実行の出力結果も提出してください」と伝える。</p>
 
-<p><strong>再提出を求めるケース：</strong><br>
-業務説明・Bot設定・ワークフロー設計図・実装テキスト・振り返りレポートのいずれかが未提出の場合は再提出を依頼してください。</p>
+<p><strong>再提出：</strong>プロンプトまたはテスト実行結果が未提出の場合。</p>
 </div>
+
+
+<script src="https://giscus.app/client.js"
+  data-repo="TakuyaTsuchiya/M5exams"
+  data-repo-id="R_kgDORpPiyQ"
+  data-category="General"
+  data-category-id="DIC_kwDORpPiyc4C4lf0"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="light"
+  data-lang="ja"
+  crossorigin="anonymous"
+  async>
+</script>
 
 
 </body>

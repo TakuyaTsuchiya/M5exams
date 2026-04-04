@@ -17,39 +17,99 @@ ul li, ol li { margin-bottom: 10px; }
 </head>
 <body>
 
-<h1>解説と回答例</h1>
+<h1>解説</h1>
 
 <h3>この課題のねらい</h3>
+
 <div class="purpose-box">
-<p>この課題は、M5で学んだすべてのスキルを統合する総合演習です。Bot作成力、知識ベース活用力、ワークフロー設計力、実装力を統合して「実際に業務を変える」体験をすることがねらいです。</p>
-<p>個々のスキルを単独で使うのではなく、業務課題に対して最適な組み合わせを自分で判断し、一気通貫で自動化を実現する力を養います。</p>
+<ol>
+<li><strong>AIに「判定」させるプロンプトを書く</strong><br>
+セクション6では「要約して」というプロンプトを書きました。今回は「緊急かどうかを判定して」というプロンプトです。AIに判定させるには、判定基準を明確に言語化する必要があります。「何が緊急で、何が緊急でないか」を自分の業務に合わせて定義する──これがプロンプト設計の応用です。</li>
+<li><strong>ワークフローの「条件分岐」を理解する</strong><br>
+セクション6のニュース要約は「毎回同じ処理」でした。今回は「緊急なら通知する、緊急でなければ何もしない」という条件分岐があります。実務の自動化では、この「場合分け」が頻繁に出てきます。</li>
+</ol>
 </div>
 
 <hr>
 
-<h3>提出方法</h3>
-<ol>
-<li>自動化対象の業務説明テキスト（業務の概要・頻度・所要時間・手順を記載）</li>
-<li>作成したBot設定テキスト（Bot名・カスタム指示の全文）</li>
-<li>ワークフロー設計図（Mermaid記法で作成したフローチャートのテキストコード）</li>
-<li>ワークフロー実装テキスト（コードまたは設定内容）＋テスト結果テキスト</li>
-<li>振り返りレポート（自動化前後の比較・時間削減効果・課題・改善アイデア）</li>
-</ol>
+<h3>セクション6との違い</h3>
+<table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+<tr style="background-color: #f0f0f0;">
+<th style="border: 1px solid #ccc; padding: 10px; text-align: left;"></th>
+<th style="border: 1px solid #ccc; padding: 10px; text-align: left;">セクション6（ニュース要約）</th>
+<th style="border: 1px solid #ccc; padding: 10px; text-align: left;">まとめ（緊急メール通知）</th>
+</tr>
+<tr>
+<td style="border: 1px solid #ccc; padding: 10px;">トリガー</td>
+<td style="border: 1px solid #ccc; padding: 10px;">毎日定時</td>
+<td style="border: 1px solid #ccc; padding: 10px;">メール受信時</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ccc; padding: 10px;">Geminiの役割</td>
+<td style="border: 1px solid #ccc; padding: 10px;">要約する</td>
+<td style="border: 1px solid #ccc; padding: 10px;">判定する＋要約する</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ccc; padding: 10px;">条件分岐</td>
+<td style="border: 1px solid #ccc; padding: 10px;">なし</td>
+<td style="border: 1px solid #ccc; padding: 10px;">あり（緊急なら通知）</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ccc; padding: 10px;">書き換える部分</td>
+<td style="border: 1px solid #ccc; padding: 10px;">「背景」欄</td>
+<td style="border: 1px solid #ccc; padding: 10px;">「緊急の基準」欄</td>
+</tr>
+</table>
 
-<h4>提出前チェックリスト</h4>
-<ul>
-<li>自動化対象の業務説明テキストが含まれているか</li>
-<li>Bot設定テキスト（Bot名・カスタム指示の全文）が提出されているか</li>
-<li>Mermaid記法のワークフロー設計図があるか</li>
-<li>ワークフロー実装テキスト＋テスト結果テキストが提出されているか</li>
-<li>振り返りレポートが記載されているか</li>
-</ul>
+<h3>回答例</h3>
+
+<h4>カスタマイズした「緊急の基準」の例</h4>
+<p>以下は、株式会社ミゾリーチの人事部スタッフが、自分の業務に合わせて緊急基準を書き換えた例です。</p>
+<div class="example-box">緊急の基準（以下のいずれかに当てはまれば緊急）：
+・内定者からの辞退連絡である
+・労務トラブルや法令違反に関する報告である
+・経営層から採用計画の即時変更の指示が出ている
+・面接当日のキャンセルや日程変更の連絡である
+
+緊急ではない基準（以下のいずれかに当てはまれば緊急ではない）：
+・求人媒体からの営業メールである
+・勤怠システムの定時通知である
+・社内イベントや研修の案内である
+・月次レポートの共有である</div>
+
+<h4>テスト実行結果の例</h4>
+<div class="example-box">You received an email from 山田太郎
+Here's what you need to know:
+
+📩 TL;DR: 内定者の鈴木さんから辞退の連絡が入りました。至急対応が必要です。
+
+📄 Email Summary: 内定者の鈴木一郎さんが他社のオファーを受諾したため、内定を辞退したいとの連絡。
+
+✅ Ask(s):
+・鈴木さんへの返信（辞退受理の連絡）
+・採用チームへの共有と補充候補の検討
+・次点候補者へのオファー可否を上長に確認
+
+https://mail.google.com/mail/u/0/#inbox/xxxxx</div>
+
+<h4>トラブルシューティングの例</h4>
+<div class="example-box">【発生したエラー】
+テスト実行でStep 5（Notify me in Chat）が失敗。
+
+【AIに相談】
+エラーメッセージをChatGPTに貼り付けて原因を質問。
+
+【AIの回答】
+「Google Chatのスペースまたはダイレクトメッセージの設定を確認してください。
+通知先が指定されていない可能性があります。」
+
+【対処】
+Step 5の通知先を自分のGoogle Chatに設定し直した → 再テスト → 正常に動作</div>
 
 <hr>
 
 <div class="purpose-box">
-<strong>この課題についてAIに相談できます：</strong><br>
-<a href="https://chatgpt.com/g/g-69c174651b248191b076f4f0ee41fc75-aigou-kou-mosiyuru5-bban" target="_blank">AI溝口 for モジュール5</a>
+解説を読んでもわからないことがあれば、<a href="https://chatgpt.com/g/g-69c174651b248191b076f4f0ee41fc75-aigou-kou-mosiyuru5-bban" target="_blank"><strong>AI溝口 for モジュール5</strong></a> に質問してみましょう。Workspace Studioの使い方やプロンプトの書き方について具体的なアドバイスがもらえます。
 </div>
 
 
